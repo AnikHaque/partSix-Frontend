@@ -1,0 +1,18 @@
+.add-course form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .add-course input {
+        width: 70%;
+        height: 45px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .add-course{
+ 
+      padding-top: 30px;
+      margin-top: 10px;
+      padding-bottom: 50px;
+    }

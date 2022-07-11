@@ -1,0 +1,27 @@
+.big-sale-1{
+    background-image: url("https://risingtheme.com/html/demo-partsix/partsix/assets/img/banner/banner11.webp");
+    background-repeat: no-repeat;
+    
+    height: 50vh;
+   padding: 30px;
+   padding-top: 50px;
+   border-radius: 1%;
+}
+.big-sale-2{
+    background-image: url("https://risingtheme.com/html/demo-partsix/partsix/assets/img/banner/banner12.webp");
+    background-repeat: no-repeat;
+  
+    height: 50vh;
+   padding: 30px;
+   padding-top: 50px;
+   border-radius: 1%;
+}
+.big-sale-3{
+    background-image: url("https://risingtheme.com/html/demo-partsix/partsix/assets/img/banner/banner13.webp");
+    background-repeat: no-repeat;
+     
+    height: 50vh;
+   padding: 30px;
+   padding-top: 50px;
+   border-radius: 1%;
+}
