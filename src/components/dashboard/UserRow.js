@@ -1,27 +1,31 @@
-import React from 'react';
-import { toast } from 'react-toastify';
+import React, { useState } from 'react';
+
 
 const UserRow = ({ user, refetch }) => {
-    const { email, role } = user;
-    const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
-            method: 'PUT',
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
-            .then(res => {
-                if(res.status === 403){
-                    toast.error('Failed to Make an admin');
-                }
-                return res.json()})
-            .then(data => {
-                if (data.modifiedCount > 0) {
-                    refetch();
-                    toast.success(`Successfully made an admin`);
-                }
-
+    const [emaill,setEmail] = useState('')
+  const {email,role} = user;
+   
+    const makeAdmin = (e) => {
+       
+        fetch('http://localhost:5000/users/admin',{
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(user)
             })
+  .then(res=>res.json())
+  .then(data=>{
+  if(data.modifiedCount){
+      alert('Successfully made admin');
+    setEmail('');
+    console.log(data);
+    
+  }
+   
+  })
+  
+        e.preventDefault()
     }
     return (
         <tr>

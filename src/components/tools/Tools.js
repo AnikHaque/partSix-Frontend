@@ -10,8 +10,8 @@ export const Tools = () => {
     },[])
   return (
     <div>
-<h1 className='font-bold text-5xl text-center mt-10 mb-5'>All Tools</h1>
-<div className='grid lg:grid-cols-4 sm:grid-cols-1 gap-10 px-12 bg-base-200 pt-10 pb-10'>
+<h1 className='font-bold text-5xl text-center mt-10 mb-5 text-white'>All Tools</h1>
+<div className='grid lg:grid-cols-4 sm:grid-cols-1 gap-10 px-12  pt-10 pb-10'>
 {
     tools.map(tool=><IndividualTool
     key={tool._id}

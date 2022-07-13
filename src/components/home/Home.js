@@ -15,14 +15,15 @@ import { Portfolio } from '../portfolio/Portfolio'
 import { Works } from '../works/Works'
 export const Home = () => {
   return (
-    <div className=''>
-        <Banner></Banner>
-     <BigSale></BigSale>
-        <About></About>
+    <div className='bg-black' >
+        <Banner className='bg-black'></Banner>
+     <BigSale className='bg-black'></BigSale>
         <br></br>
         <br></br>
         <br></br>
-        <Tools></Tools>
+        <Tools ></Tools>
+        <br></br>
+        <br></br>
         <br></br>
         <br></br>
         <br></br>
@@ -30,18 +31,31 @@ export const Home = () => {
         <br></br>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
+        <About ></About>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <Portfolio></Portfolio>
-<br></br>
         <br></br>
         <br></br>
-        <Brands></Brands>
+        <br></br>
+        <br></br>
         <br></br>
         
-
         <Blogs></Blogs>
         <br></br>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>
+        {/* <Brands></Brands>
+        <br></br>
+        <br></br>
+        <br></br> */}
         
         <Footer></Footer>
     </div>
