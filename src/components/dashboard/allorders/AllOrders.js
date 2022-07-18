@@ -16,6 +16,28 @@ const AllOrders = () => {
         }
     }, [user])
 
+    const handleDelete = id =>{
+        const proceed = window.confirm('Are you sure you want to delete?');
+        if(proceed){
+            console.log('deleting user with id',id);
+            const url = `http://localhost:5000/booking/${id}`;
+            fetch(url,{
+                method:'DELETE'
+
+            })
+            .then(res=>res.json())
+            .then(data=>{
+         if(data.deletedCount>0){
+            console.log('deleted');
+            const remaining = appointments.filter(records=>records._id !==id);
+            setAppointments(remaining);
+
+         }
+            })
+        }
+    
+            }
+
     return (
         <div>
             <h2>My Appointments: {appointments.length}</h2>
@@ -40,6 +62,7 @@ const AllOrders = () => {
                                 <td>$ {a.price}</td>
                                 <td>{a.quantity}</td>
                                 <td>{a.address}</td>
+                                <button onClick={()=>handleDelete(a._id)} className='btn btn-error text-white'>Delete</button>
                             </tr>)
                         }
                         
