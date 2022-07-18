@@ -14,6 +14,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import MyOrders from './components/dashboard/myorders/MyOrders';
 import AllOrders from './components/dashboard/allorders/AllOrders';
 import { AllUsers } from './components/dashboard/allusers/AllUsers';
+import { Update } from './components/dashboard/update/Update';
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,7 @@ function App() {
    <Routes>
    <Route path="/" element={<Home></Home>} />
    <Route path="/addtools" element={<AddTools></AddTools>} />
-  
+   <Route path="/update/:id" element={<Update></Update>} />
    <Route path="/parts/:id" element={
           <RequireAuth>
             <Details></Details>

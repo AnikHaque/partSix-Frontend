@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 
@@ -39,10 +40,10 @@ const AllOrders = () => {
             }
 
     return (
-        <div>
-            <h2>My Appointments: {appointments.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+        <div className='bg-black'>
+            <h2 className='text-white font-bold text-center text-2xl pt-5'>My Appointments: {appointments.length}</h2>
+            <div class="overflow-x-auto pt-10 pb-10">
+                <table class="table-compact w-full text-gray-400 ">
                     <thead>
                         <tr>
                             <th></th>
@@ -56,13 +57,22 @@ const AllOrders = () => {
                     <tbody>
                         {
                             appointments.map((a, index) =><tr>
-                                <th>{index + 1}</th>
-                                <td>{a.email}</td>
-                                <td>{a.partsname}</td>
-                                <td>$ {a.price}</td>
-                                <td>{a.quantity}</td>
-                                <td>{a.address}</td>
-                                <button onClick={()=>handleDelete(a._id)} className='btn btn-error text-white'>Delete</button>
+                                <th className='pb-3'>{index + 1}</th>
+                                <td className='text-center'>{a.email}</td>
+                                <td className='text-center'>{a.partsname}</td>
+                                <td className='text-center'>$ {a.price}</td>
+                                <td className='text-center'>{a.quantity}</td>
+                                <td className='text-center'>{a.address}</td>
+                                <td className='text-center'>
+                                <button  className='btn btn-primary text-white'>
+    <Link to={`/update/${a._id}`}>Edit</Link>
+   </button>
+                                </td>
+                                <td className='text-center'>
+                                <button onClick={()=>handleDelete(a._id)} className=' text-white btn btn-error'>Delete</button>
+                                </td>
+                               
+                                
                             </tr>)
                         }
                         
