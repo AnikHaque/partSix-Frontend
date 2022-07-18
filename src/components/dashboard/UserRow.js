@@ -7,7 +7,7 @@ const UserRow = ({ user, refetch }) => {
    
     const makeAdmin = (e) => {
        
-        fetch('http://localhost:5000/users/admin',{
+        fetch('https://arcane-falls-40021.herokuapp.com/users/admin',{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
