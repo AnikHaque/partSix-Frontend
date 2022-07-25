@@ -23,6 +23,13 @@ const AddTools = () => {
       <input {...register("displayname",)} placeholder="Name"  />
       <input {...register("name",)} placeholder="Product Name" />
       <input {...register("description",)} placeholder="Product Description"/>
+      <input {...register("keyfeatures",)} placeholder="Key Features of Products"/>
+      <input {...register("brands",)} placeholder="Product Brand"/>
+      <input {...register("country",)} placeholder="Country"/>
+      <input {...register("partnumber",)} placeholder="Part Number"/>
+      <input {...register("color",)} placeholder=" Product Color"/>
+      <input {...register("material",)} placeholder="Material"/>
+    
       <input {...register("sold",)} placeholder="Product sold"/>
       <input type="number" {...register("price", )} placeholder="Product Price"/>
       
