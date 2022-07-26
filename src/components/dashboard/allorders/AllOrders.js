@@ -41,7 +41,7 @@ const AllOrders = () => {
 
     return (
         <div className='bg-black'>
-            <h2 className='text-white font-bold text-center text-2xl pt-5'>My Appointments: {appointments.length}</h2>
+            <h2 className='text-white font-bold text-center text-2xl pt-5'>All Orders: {appointments.length}</h2>
             <div class="overflow-x-auto pt-10 pb-10">
                 <table class="table-compact w-full text-gray-400 ">
                     <thead>
