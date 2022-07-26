@@ -19,3 +19,7 @@
     .hello{
       width: 70%;
     }
+    .shadow-details{
+      box-shadow: 1px 1px 5px gray;
+    }
+    
