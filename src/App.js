@@ -19,6 +19,10 @@ import { Tools } from './components/tools/Tools';
 import Test from './components/Test';
 import Login from './components/login/Login';
 import { DashboardHome } from './components/dashboard/DashboardHome';
+import { Shop } from './components/shop/Shop';
+import { Footer } from './components/footer/Footer';
+import { Blogs } from './components/blogs/Blogs';
+import { BlogPage } from './components/blogpage/Blogpage';
 function App() {
   return (
     <div className="App">
@@ -26,6 +30,9 @@ function App() {
    <Routes>
    <Route path="/" element={<Home></Home>} />
    <Route path="/addtools" element={<AddTools></AddTools>} />
+   <Route path="/shop" element={<Shop></Shop>} />
+   <Route path="/about" element={<About></About>} />
+   <Route path="/blogs" element={<BlogPage></BlogPage>} />
    <Route path="/update/:id" element={<Update></Update>} />
    <Route path="/parts/:id" element={
           <RequireAuth>
@@ -50,6 +57,7 @@ function App() {
    <Route path="/login" element={<Login></Login>} />
    <Route path="/signUp" element={<SignUp></SignUp>} />
    </Routes>
+   <Footer></Footer>
     </div>
   );
 }

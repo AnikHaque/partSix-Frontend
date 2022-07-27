@@ -1,8 +1,8 @@
 import React from 'react'
-import './Blogs.css';
-export const Blogs = () => {
+import './Blogpage.css';
+export const BlogPage = () => {
   return (
-    <div className=' ml-10 mr-10 bg-black'>
+    <div className=' ml-10 mr-10 bg-black pt-16 pb-16 pl-12 pr-12 mb-10'>
     <div className='grid lg:grid-cols-4 sm:grid-cols-1 gap-5 mt-5 card-1'>
           <div class="card lg:max-w-lg  border-blog">
   <figure><img src='https://risingtheme.com/html/demo-partsix/partsix/assets/img/blog/blog1.webp' alt="Shoes" className='w-96 pt-10' /></figure>

@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [foods, setFoods] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`http://localhost:5000/booking?email=${user.email}`,{
+        fetch(`https://arcane-falls-40021.herokuapp.com/booking?email=${user.email}`,{
             method:'GET',
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -22,7 +22,7 @@ const MyOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `http://localhost:5000/booking/${id}`;
+            const url = `https://arcane-falls-40021.herokuapp.com/booking/${id}`;
             fetch(url,{
                 method:'DELETE'
 
