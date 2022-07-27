@@ -4,7 +4,12 @@ import { Loading } from '../../loading/Loading';
 import UserRow from '../UserRow';
 
 export const AllUsers = () => {
-  const {data: users,isLoading,refetch} = useQuery('users',()=>fetch('http://localhost:5000/user').then(res=>res.json()));
+  const {data: users,isLoading,refetch} = useQuery('users',()=>fetch('http://localhost:5000/user',{
+  method:'GET',
+  headers:{
+    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+  }
+  }).then(res=>res.json()));
   if(isLoading){
     return <Loading></Loading>
   }

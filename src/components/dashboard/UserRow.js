@@ -7,12 +7,12 @@ const UserRow = ({ user, refetch }) => {
    
     const makeAdmin = (e) => {
        
-        fetch('http://localhost:5000/users/admin',{
+        fetch(`http://localhost:5000/user/admin/${email}`,{
             method:'PUT',
             headers:{
-                'content-type':'application/json'
+               authorization:`Bearer ${localStorage.getItem('accessToken')}`
             },
-            body:JSON.stringify(user)
+         
             })
   .then(res=>res.json())
   .then(data=>{
