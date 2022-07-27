@@ -18,6 +18,7 @@ import { Update } from './components/dashboard/update/Update';
 import { Tools } from './components/tools/Tools';
 import Test from './components/Test';
 import Login from './components/login/Login';
+import { DashboardHome } from './components/dashboard/DashboardHome';
 function App() {
   return (
     <div className="App">
@@ -32,7 +33,7 @@ function App() {
           </RequireAuth>
         } />
         <Route path="dashboard" element={<Dashboard />} >
-        <Route index element={<About/>}></Route>
+        <Route index element={<DashboardHome></DashboardHome>}></Route>
           <Route path="about" element={<About></About>}></Route>
           <Route path="allorders" element={<AllOrders/>}></Route>
           <Route path="myorders" element={<MyOrders/>}></Route>
@@ -47,7 +48,7 @@ function App() {
           <Route path=":id" element={<AllOrders></AllOrders>} />
         </Route>
    <Route path="/login" element={<Login></Login>} />
-   <Route path="/register" element={<SignUp></SignUp>} />
+   <Route path="/signUp" element={<SignUp></SignUp>} />
    </Routes>
     </div>
   );

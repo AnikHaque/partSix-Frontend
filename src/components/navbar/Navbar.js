@@ -48,16 +48,18 @@ const Navbar = () => {
       <li><Link to="/blogs">Blogs</Link></li>
       <li><Link to="/portfolio">Portfolio</Link></li>
       <li><Link to="/contact">Contact</Link></li>
+      
    
     
     </ul>
   </div>
   <div class="navbar-end">
+  <Link className='mr-20 font-bold' to="/dashboard">Dashboard</Link>
   {
     user ? 
-    <button className="btn btn-error"  onClick={logout} >Sign Out</button>
+    <button className="btn btn-dark"  onClick={logout} >Sign Out</button>
     :
-    <Link to="/login" className='btn btn-dark text-white font-bold'>Login</Link>
+    <Link to="/login" className='btn btn-dark  text-white font-bold'>Login</Link>
   }
   </div>
 </div>

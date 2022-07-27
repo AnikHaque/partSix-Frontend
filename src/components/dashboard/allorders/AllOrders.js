@@ -11,7 +11,12 @@ const AllOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/booking`)
+            fetch('http://localhost:5000/booking',{
+                method:'GET',
+                headers:{
+                    'authorization':`Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
                 .then(res => res.json())
                 .then(data => setAppointments(data));
         }
