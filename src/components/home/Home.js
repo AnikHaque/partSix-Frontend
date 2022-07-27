@@ -13,6 +13,7 @@ import { BigSale } from '../bigsale/BigSale'
 import { About } from '../about/About'
 import { Portfolio } from '../portfolio/Portfolio'
 import { Works } from '../works/Works'
+import { Test } from '../Test'
 export const Home = () => {
   return (
     <div className='bg-black' >
@@ -21,6 +22,7 @@ export const Home = () => {
         <br></br>
         <br></br>
         <br></br>
+        <Test></Test>
         <Tools ></Tools>
         <br></br>
         <br></br>
