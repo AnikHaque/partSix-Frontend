@@ -11,7 +11,7 @@ const AllOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://arcane-falls-40021.herokuapp.com/booking`)
+            fetch(`http://localhost:5000/booking`)
                 .then(res => res.json())
                 .then(data => setAppointments(data));
         }
@@ -21,7 +21,7 @@ const AllOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `https://arcane-falls-40021.herokuapp.com/booking/${id}`;
+            const url = `http://localhost:5000/booking/${id}`;
             fetch(url,{
                 method:'DELETE'
 

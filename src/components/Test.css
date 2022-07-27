@@ -1,0 +1,25 @@
+.products {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+  .productsNav {
+    width: 70%;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .productsNav a {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(69, 62, 249);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

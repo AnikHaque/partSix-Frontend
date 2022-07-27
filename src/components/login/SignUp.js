@@ -2,9 +2,9 @@ import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
-// import Loading from '../Shared/Loading';
+
 import { Link, useNavigate } from 'react-router-dom';
-import CustomUser from '../../hooks/CustomUser';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -17,29 +17,28 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-    const [token] = CustomUser(user || gUser);
+
+    const [token]  = useToken(user || gUser);
 
     const navigate = useNavigate();
 
     let signInError;
 
-    // if (loading || gLoading || updating) {
-    //     return <Loading></Loading>
-    // }
+   
 
     if (error || gError || updateError) {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
-    if (user || gUser) {
-        console.log(user || gUser);
+    if (token) {
+        navigate('/');
     }
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-       
-      
+        console.log('update done');
+        
     }
     return (
         <div className='flex h-screen justify-center items-center'>
@@ -118,7 +117,7 @@ const SignUp = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn btn-error w-full max-w-xs text-white' type="submit" value="Sign Up" />
+                        <input className='btn w-full max-w-xs text-white' type="submit" value="Sign Up" />
                     </form>
                     <p><small>Already have an account? <Link className='text-primary' to="/login">Please login</Link></small></p>
                     <div className="divider">OR</div>

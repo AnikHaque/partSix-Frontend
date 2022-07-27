@@ -12,7 +12,7 @@ export const Details = () => {
     const [parts,setParts] = useState({})
     const [disable, setDisable] = useState(false);
      useEffect(()=>{
-         fetch(`https://arcane-falls-40021.herokuapp.com/parts/${id}`)
+         fetch(`http://localhost:5000/parts/${id}`)
        .then(res=>res.json())
         .then(data=>setParts(data))
 
@@ -21,7 +21,7 @@ export const Details = () => {
 
      const onSubmit = data =>{
         console.log(data);
-        axios.post("https://arcane-falls-40021.herokuapp.com/booking",data)
+        axios.post("http://localhost:5000/booking",data)
         .then(res=>{
             if(res.data.insertedId){
                alert("Added Successfully.")

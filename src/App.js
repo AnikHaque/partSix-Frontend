@@ -6,7 +6,7 @@ import {Routes,Route} from 'react-router-dom'
 import { Home } from './components/home/Home';
 import AddTools from './components/addtools/AddTools';
 import { Details } from './components/productdetails/Details';
-import { Login } from './components/login/Login';
+
 import SignUp from './components/login/SignUp';
 import RequireAuth from './components/login/RequireAuth';
 import { About } from './components/about/About';
@@ -17,6 +17,7 @@ import { AllUsers } from './components/dashboard/allusers/AllUsers';
 import { Update } from './components/dashboard/update/Update';
 import { Tools } from './components/tools/Tools';
 import Test from './components/Test';
+import Login from './components/login/Login';
 function App() {
   return (
     <div className="App">
@@ -40,7 +41,7 @@ function App() {
         </Route>
 
         <Route path="test" element={<Home></Home>}>
-          <Route path="search" element={<Tools></Tools>} />
+          <Route path="search" element={<AddTools></AddTools>} />
           <Route path="list" element={<Update></Update>} />
           <Route path="add" element={<AddTools></AddTools>} />
           <Route path=":id" element={<AllOrders></AllOrders>} />

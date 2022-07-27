@@ -7,7 +7,7 @@ const AddTools = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://arcane-falls-40021.herokuapp.com/parts',data)
+        axios.post('http://localhost:5000/parts',data)
         .then(res=>{
            if(res.data.insertedId){
                alert('Added Successfully');

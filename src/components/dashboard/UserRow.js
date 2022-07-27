@@ -7,7 +7,7 @@ const UserRow = ({ user, refetch }) => {
    
     const makeAdmin = (e) => {
        
-        fetch('https://arcane-falls-40021.herokuapp.com/users/admin',{
+        fetch('http://localhost:5000/users/admin',{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -16,7 +16,7 @@ const UserRow = ({ user, refetch }) => {
             })
   .then(res=>res.json())
   .then(data=>{
-  if(data.modifiedCount){
+  if(data.modifiedCount>0){
       alert('Successfully made admin');
     setEmail('');
     console.log(data);
