@@ -13,16 +13,17 @@ import { BigSale } from '../bigsale/BigSale'
 import { About } from '../about/About'
 import { Portfolio } from '../portfolio/Portfolio'
 import { Works } from '../works/Works'
-import { Test } from '../Test'
+import Test from '../Test'
+
 export const Home = () => {
   return (
-    <div className='bg-black' >
+    <div className='bg-primary' >
         <Banner className='bg-black'></Banner>
      <BigSale className='bg-black'></BigSale>
         <br></br>
         <br></br>
         <br></br>
-        <Test></Test>
+      
         <Tools ></Tools>
         <br></br>
         <br></br>

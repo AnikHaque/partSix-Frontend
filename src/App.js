@@ -15,6 +15,8 @@ import MyOrders from './components/dashboard/myorders/MyOrders';
 import AllOrders from './components/dashboard/allorders/AllOrders';
 import { AllUsers } from './components/dashboard/allusers/AllUsers';
 import { Update } from './components/dashboard/update/Update';
+import { Tools } from './components/tools/Tools';
+import Test from './components/Test';
 function App() {
   return (
     <div className="App">
@@ -35,6 +37,13 @@ function App() {
           <Route path="myorders" element={<MyOrders/>}></Route>
           <Route path="allusers" element={<AllUsers></AllUsers>}></Route>
          
+        </Route>
+
+        <Route path="test" element={<Home></Home>}>
+          <Route path="search" element={<Tools></Tools>} />
+          <Route path="list" element={<Update></Update>} />
+          <Route path="add" element={<AddTools></AddTools>} />
+          <Route path=":id" element={<AllOrders></AllOrders>} />
         </Route>
    <Route path="/login" element={<Login></Login>} />
    <Route path="/register" element={<SignUp></SignUp>} />
