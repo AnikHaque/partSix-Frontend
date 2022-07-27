@@ -5,7 +5,7 @@ import auth from '../../../firebase.init';
 
 const MyOrders = () => {
 
-    const [foods, setFoods] = useState([])
+    const [foods, setFoods] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
         fetch(`http://localhost:5000/booking?email=${user.email}`,{
