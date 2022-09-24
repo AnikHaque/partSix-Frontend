@@ -9,18 +9,18 @@ export const Shop = () => {
         .then(data => setTools(data))
     },[])
   return (
-    <div className='bg-black pt-10'>
+    <div>
 <h1 className='font-bold text-5xl text-center mt-10 mb-5 text-white'>All Tools</h1>
-<div className='grid lg:grid-cols-4 sm:grid-cols-1 gap-10 px-12  pt-10 pb-10'>
+<div className='grid lg:grid-cols-3 sm:grid-cols-1  pt-10 pb-10'>
+
 {
     tools.map(tool=><IndividualTool
     key={tool._id}
     tool={tool}
-    
     ></IndividualTool>)
 }
-</div>
 
+</div>
     </div>
   )
 }

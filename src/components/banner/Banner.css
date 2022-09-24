@@ -1,3 +1,18 @@
 .shadow-banner{
     box-shadow: 5px 5px 10px gray;
 }
+.bg-banner{
+    background-image: url("https://weblearnbd.net/wp/epora/wp-content/uploads/2022/08/slider-bg-02.jpg");
+    background-repeat: no-repeat;
+background-size: cover;
+    background-position:center ;
+   
+    height: 90vh;
+}
+.banner-tag{
+   
+}
+.btn-banner{
+    background-color: #518378;
+    
+}

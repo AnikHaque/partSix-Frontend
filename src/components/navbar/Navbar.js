@@ -3,7 +3,7 @@ import {Link, Navigate, useNavigate} from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
-
+import './Navbar.css';
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Navbar = () => {
     
   return (
     <div>
-       <div class="navbar bg-base-100">
+       <div class="navbar">
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -57,9 +57,9 @@ const Navbar = () => {
   <Link className='mr-20 font-bold' to="/dashboard">Dashboard</Link>
   {
     user ? 
-    <button className="btn btn-dark"  onClick={logout} >Sign Out</button>
+    <button className="btn btn-banner"  onClick={logout} >Sign Out</button>
     :
-    <Link to="/login" className='btn btn-dark  text-white font-bold'>Login</Link>
+    <Link to="/login" className='btn btn-banner  text-white font-bold'>Login</Link>
   }
   </div>
 </div>

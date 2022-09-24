@@ -4,7 +4,7 @@ import Navbar from './components/navbar/Navbar';
 import { Banner } from './components/banner/Banner';
 import {Routes,Route} from 'react-router-dom'
 import { Home } from './components/home/Home';
-import AddTools from './components/addtools/AddTools';
+
 import { Details } from './components/productdetails/Details';
 
 import SignUp from './components/login/SignUp';
@@ -23,13 +23,14 @@ import { Shop } from './components/shop/Shop';
 import { Footer } from './components/footer/Footer';
 import { Blogs } from './components/blogs/Blogs';
 import { BlogPage } from './components/blogpage/Blogpage';
+import AddCourses from './components/addtools/AddCourses';
 function App() {
   return (
     <div className="App">
       <Navbar></Navbar> 
    <Routes>
    <Route path="/" element={<Home></Home>} />
-   <Route path="/addtools" element={<AddTools></AddTools>} />
+   <Route path="/addcourses" element={<AddCourses></AddCourses>} />
    <Route path="/shop" element={<Shop></Shop>} />
    <Route path="/about" element={<About></About>} />
    <Route path="/blogs" element={<BlogPage></BlogPage>} />
@@ -49,9 +50,9 @@ function App() {
         </Route>
 
         <Route path="test" element={<Home></Home>}>
-          <Route path="search" element={<AddTools></AddTools>} />
+          <Route path="search" element={<AddCourses></AddCourses>} />
           <Route path="list" element={<Update></Update>} />
-          <Route path="add" element={<AddTools></AddTools>} />
+          <Route path="add" element={<AddCourses></AddCourses>} />
           <Route path=":id" element={<AllOrders></AllOrders>} />
         </Route>
    <Route path="/login" element={<Login></Login>} />

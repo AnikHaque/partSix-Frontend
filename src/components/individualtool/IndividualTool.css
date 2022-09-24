@@ -1,4 +1,7 @@
-.shadow-tool{
-   border: 1px solid gray;
-  
+.instructor-img{
+   width: 25%;
+   border-radius: 50%;
+}
+.font-card{
+   margin-left: -100px;
 }

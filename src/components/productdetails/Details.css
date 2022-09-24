@@ -22,4 +22,10 @@
     .shadow-details{
       
     }
-    
+    .details-ins{
+      border-radius: 50%;
+      
+    }
+    .part-ins{
+      margin-left: -30px;
+    }
