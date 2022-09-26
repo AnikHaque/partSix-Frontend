@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import "~slick-carousel/slick/slick.css"; 
+import "~slick-carousel/slick/slick-theme.css";
 import Navbar from './components/navbar/Navbar';
 import { Banner } from './components/banner/Banner';
 import {Routes,Route} from 'react-router-dom'
