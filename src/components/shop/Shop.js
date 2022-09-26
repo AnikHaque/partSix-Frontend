@@ -10,7 +10,7 @@ export const Shop = () => {
     },[])
   return (
     <div>
-<h1 className='font-bold text-5xl text-center mt-10 mb-5 text-white'>All Tools</h1>
+<h2 className=' text-center mb-5 text-title text-2xl'>Our Popular Courses</h2>
 <div className='grid lg:grid-cols-3 sm:grid-cols-1  pt-10 pb-10'>
 
 {

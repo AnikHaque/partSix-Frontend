@@ -14,6 +14,8 @@ import { About } from '../about/About'
 import { Portfolio } from '../portfolio/Portfolio'
 import { Works } from '../works/Works'
 import { Shop } from '../shop/Shop';
+import { Supporter } from '../supporters/Supporter'
+import { Class } from '../class/Class'
 
 export const Home = () => {
   return (
@@ -22,7 +24,15 @@ export const Home = () => {
         <br></br>
         <br></br>
         <br></br>
-       <Shop></Shop>    
+        <Class></Class>
+        <br></br>
+        <br></br>
+        <br></br>
+       <Shop></Shop> 
+       <br></br>
+        <br></br>
+        <br></br>
+        <Supporter></Supporter>   
     </div>
   )
 }
