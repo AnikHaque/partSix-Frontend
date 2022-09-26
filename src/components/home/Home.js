@@ -16,6 +16,9 @@ import { Works } from '../works/Works'
 import { Shop } from '../shop/Shop';
 import { Supporter } from '../supporters/Supporter'
 import { Class } from '../class/Class'
+import { Count } from '../countup/Count'
+import { LiveClass } from '../liveclass/LiveClass'
+import { Transform } from '../transform/Transform'
 
 export const Home = () => {
   return (
@@ -28,11 +31,26 @@ export const Home = () => {
         <br></br>
         <br></br>
         <br></br>
+        <Count></Count>
+        <br></br>
+        <br></br>
+        <br></br>
        <Shop></Shop> 
        <br></br>
         <br></br>
         <br></br>
+        <LiveClass></LiveClass>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Transform></Transform>
+        <br></br>
+        <br></br>
+        <br></br>
         <Supporter></Supporter>   
+        <br></br>
+        <br></br>
+        <br></br>
     </div>
   )
 }
