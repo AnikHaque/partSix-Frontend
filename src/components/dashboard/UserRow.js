@@ -28,11 +28,11 @@ const UserRow = ({ user, refetch }) => {
         e.preventDefault()
     }
     return (
-        <tr>
-            <th>1</th>
+        <tr className='bg-green-500'>
+            <th></th>
             <td>{email}</td>
-            <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td>
-            <td><button class="btn btn-xs">Remove User</button></td>
+            <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs btn-course">Make Admin</button>}</td>
+            <td><button class="btn btn-xs btn-error">Remove User</button></td>
         </tr>
     );
 };

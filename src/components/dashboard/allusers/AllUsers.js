@@ -14,15 +14,15 @@ export const AllUsers = () => {
     return <Loading></Loading>
   }
   return (
-    <div>AllUsers: {users.length}
+  
     <div class="overflow-x-auto">
-                <table class="table w-full">
+                <table class="table w-full bg-myorder">
                     <thead>
                         <tr>
                             <th></th>
                             <th>Name</th>
                             <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,6 +38,6 @@ export const AllUsers = () => {
             </div>
     
     
-    </div>
+   
   )
 }

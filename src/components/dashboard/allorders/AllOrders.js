@@ -45,7 +45,7 @@ const AllOrders = () => {
             }
 
     return (
-        <div className='bg-black'>
+        <div className='bg-myorder mb-12'>
             <h2 className='text-white font-bold text-center text-2xl pt-5'>All Orders: {appointments.length}</h2>
             <div class="overflow-x-auto pt-10 pb-10">
                 <table class="table-compact w-full text-gray-400 ">
@@ -69,12 +69,12 @@ const AllOrders = () => {
                                 <td className='text-center'>{a.quantity}</td>
                                 <td className='text-center'>{a.address}</td>
                                 <td className='text-center'>
-                                <button  className='btn btn-primary text-white'>
+                                <button  className='btn btn-course text-gray-400'>
     <Link to={`/update/${a._id}`}>Edit</Link>
    </button>
                                 </td>
                                 <td className='text-center'>
-                                <button onClick={()=>handleDelete(a._id)} className=' text-white btn btn-error'>Delete</button>
+                                <button onClick={()=>handleDelete(a._id)} className=' btn btn-error text-white'>Delete</button>
                                 </td>
                                
                                 

@@ -1,6 +1,7 @@
 import { async } from '@firebase/util';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react'
+import { Loading } from '../loading/Loading';
 
 export const CheckoutForm = ({coursebooking}) => {
     const stripe = useStripe();
@@ -101,7 +102,7 @@ setProcessing(false);
 
     }
   return (
-    <div>
+    <div className=''>
         <form onSubmit={handleSubmit}>
       <CardElement
         options={{
@@ -132,6 +133,7 @@ setProcessing(false);
             <p><b>Your TransactionId</b> <span className='text-secondary'>{transactionId}</span></p>
         </div>
     }
+   
     </div>
   )
 }

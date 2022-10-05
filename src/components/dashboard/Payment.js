@@ -20,11 +20,11 @@ export const Payment = () => {
         }
   return (
     <div>
-<div className="card w-96 bg-base-100 shadow-xl">
+<div className="card w-96 bg-myorder mx-auto mt-12 shadow-xl">
   <div className="card-body">
-    <h2 className="card-title font-bold">Hello! <span className='text-primary'>{coursebooking.name}</span></h2>
-    <h2 className="font-bold text-secondary">Please pay for {coursebooking.coursename}</h2>
-    <p>Please Pay $ <span className='font-bold'>{coursebooking.price}</span></p>
+    <h2 className="card-title font-bold">Hello! <span className='text-white'>{coursebooking.name}</span></h2>
+    <h2 className="font-bold text-green-300">Please pay for <b className='text-white'>{coursebooking.coursename}</b></h2>
+    <p>Please Pay $ <span className='font-bold text-secondary'>{coursebooking.price}</span></p>
    
     <Elements stripe={stripePromise}>
       <CheckoutForm coursebooking={coursebooking} />

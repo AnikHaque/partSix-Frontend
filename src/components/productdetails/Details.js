@@ -60,7 +60,7 @@ const handleChange = event => {
     <div className='grid lg:grid-cols-2 sm:grid-cols-1 bg-dark  mx-5  shadow-details '>
     <div>
     <img src={parts.img} className='w-full'></img>
-    <h1 className='font-bold text-3xl mt-2'>{parts.name}</h1>
+    <h1 className='font-bold text-2xl mt-2 mb-2'>{parts.name}</h1>
     <div className='grid lg:grid-cols-4 sm:grid-cols-4 '>
       
       <p>  <i class="fa-solid fa-star text-warning"></i> ({parts.review})</p>
@@ -132,41 +132,41 @@ const handleChange = event => {
 </div>
        <div className='grid lg:grid-cols-2 sm:grid-cols-1  pt-10 pb-10'>
     <div>
-      <h1 className=' text-3xl'>Lessons: </h1>
+      <h1 className=' font-bold text-title'>Lessons: </h1>
     </div>
     <div>
-      <p className='text-2xl'>{parts.lessons}</p>
+      <p className='font-bold'>{parts.lessons}</p>
     </div>
     
     <div>
-      <h1 className=' text-2xl mt-2'>Quizes: </h1>
+      <h1 className=' font-bold mt-2 text-title'>Quizes: </h1>
     </div>
     <div>
-      <p className='text-2xl mt-2'>{parts.quizes}</p>
+      <p className='font-bold mt-2'>{parts.quizes}</p>
     </div>
     <div>
-      <h1 className=' text-2xl mt-2'>Students: </h1>
+      <h1 className=' font-bold mt-2 text-title'>Students: </h1>
     </div>
     <div>
-      <p className='text-2xl mt-2'>{parts.students}</p>
+      <p className='font-bold mt-2'>{parts.students}</p>
     </div>
     <div>
-      <h1 className=' text-2xl mt-2'>Duration: </h1>
+      <h1 className=' font-bold mt-2 text-title'>Duration: </h1>
     </div>
     <div>
-      <p className='text-2xl mt-2'>{parts.courseduration}</p>
+      <p className='font-bold mt-2'>{parts.courseduration}</p>
     </div>
     <div>
-      <h1 className=' text-2xl mt-2'>Skill Level: </h1>
+      <h1 className=' font-bold mt-2 text-title'>Skill Level: </h1>
     </div>
     <div>
-      <p className='text-2xl mt-2'>{parts.skilllevel}</p>
+      <p className='font-bold mt-2'>{parts.skilllevel}</p>
     </div>
     <div>
-      <h1 className=' text-2xl mt-2'>Language: </h1>
+      <h1 className=' font-bold mt-2 text-title'>Language: </h1>
     </div>
     <div>
-      <p className='text-2xl mt-2'>{parts.language}</p>
+      <p className='font-bold mt-2'>{parts.language}</p>
     </div>
     
     <div className='grid lg:grid-cols-1 sm:grid-cols-1 gap-2'>
