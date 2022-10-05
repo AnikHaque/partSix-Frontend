@@ -4,7 +4,7 @@ import { IndividualTool } from '../individualtool/IndividualTool'
 export const Shop = () => {
     const [tools, setTools] = useState([])
     useEffect(()=>{
-        fetch('https://arcane-falls-40021.herokuapp.com/parts')
+        fetch('https://dry-brook-75772.herokuapp.com/parts')
         .then(res => res.json())
         .then(data => setTools(data))
     },[])

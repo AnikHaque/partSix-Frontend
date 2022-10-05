@@ -11,7 +11,7 @@ const AllOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch('https://arcane-falls-40021.herokuapp.com/booking',{
+            fetch('https://dry-brook-75772.herokuapp.com/booking',{
                 method:'GET',
                 headers:{
                     'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const AllOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `https://arcane-falls-40021.herokuapp.com/booking/${id}`;
+            const url = `https://dry-brook-75772.herokuapp.com/booking/${id}`;
             fetch(url,{
                 method:'DELETE'
 

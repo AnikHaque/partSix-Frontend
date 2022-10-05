@@ -26,6 +26,7 @@ import { Footer } from './components/footer/Footer';
 import { Blogs } from './components/blogs/Blogs';
 import { BlogPage } from './components/blogpage/Blogpage';
 import AddCourses from './components/addtools/AddCourses';
+import { Payment } from './components/dashboard/Payment';
 function App() {
   return (
     <div className="App">
@@ -47,6 +48,7 @@ function App() {
           <Route path="about" element={<About></About>}></Route>
           <Route path="allorders" element={<AllOrders/>}></Route>
           <Route path="myorders" element={<MyOrders/>}></Route>
+          <Route path="payment/:id" element={<Payment/>}></Route>
           <Route path="allusers" element={<AllUsers></AllUsers>}></Route>
          
         </Route>

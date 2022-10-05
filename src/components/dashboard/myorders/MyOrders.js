@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 
@@ -8,7 +9,7 @@ const MyOrders = () => {
     const [foods, setFoods] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://arcane-falls-40021.herokuapp.com/booking?email=${user.email}`,{
+        fetch(`https://dry-brook-75772.herokuapp.com/booking?email=${user.email}`,{
             method:'GET',
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -22,7 +23,7 @@ const MyOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `https://arcane-falls-40021.herokuapp.com/booking/${id}`;
+            const url = `https://dry-brook-75772.herokuapp.com/booking/${id}`;
             fetch(url,{
                 method:'DELETE'
 
@@ -52,20 +53,25 @@ const MyOrders = () => {
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>Address</th>
+                            <th></th>
+                            <th>Pay</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             foods.map((a, index) =><tr>
                                 <th>{index + 1}</th>
-                                <td className='text-center'>{a.partsname}</td>
+                                <td className='text-center'>{a.coursename}</td>
                                 <td className='text-center'>$ {a.price}</td>
                                 <td className='text-center'>{a.quantity}</td>
                                 <td className='text-center'>{a.address}</td>
                                 <td className='text-center'>
                                 <button onClick={()=>handleDelete(a._id)} className='text-white'>Delete</button>
                                 </td>
-
+                                <td className='text-center'>
+                                    {(a.price && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-primary'>Pay</button></Link>}
+                                    {(a.price && a.paid) && <button>Paid</button>}
+                                    </td>
                                
                             </tr>)
                         }
