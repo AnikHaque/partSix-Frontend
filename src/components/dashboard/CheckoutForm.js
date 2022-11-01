@@ -12,7 +12,7 @@ export const CheckoutForm = ({coursebooking}) => {
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState("");
 
-    const {_id,price,email,name,coursename} = coursebooking;
+    const {_id,patientName,date,patient,fees} = coursebooking;
 
     useEffect(()=>{
 fetch(`https://dry-brook-75772.herokuapp.com/create-payment-intent`,{
@@ -21,7 +21,7 @@ fetch(`https://dry-brook-75772.herokuapp.com/create-payment-intent`,{
         'content-type':'application/json',
         'authorization':`Bearer ${localStorage.getItem('accessToken')}`
     },
-    body:JSON.stringify({price})
+    body:JSON.stringify({fees})
 })
 .then(res=>res.json())
 .then(data=>{
@@ -29,7 +29,8 @@ if(data?.clientSecret){
     setClientSecret(data.clientSecret);
 }
 })
-    }, [price])
+    }, [fees])
+    
     const handleSubmit= async(event) => {
         event.preventDefault();
 
@@ -62,8 +63,8 @@ setProcessing(true);
           payment_method: {
             card: card,
             billing_details: {
-              name: name,
-              email:email,
+              name: patientName,
+              email:patient,
               
             },
           },
@@ -85,14 +86,14 @@ const payment = {
   transactionId: paymentIntent.id
 }
 
-fetch(`https://dry-brook-75772.herokuapp.com/booking/${_id}`,{
-  method:'PATCH',
-  headers:{
-    'content-type':'application/json',
-    'authorization':`Bearer ${localStorage.getItem('accessToken')}`
-},
-body:JSON.stringify(payment)
-})
+// fetch(`https://dry-brook-75772.herokuapp.com/booking/${_id}`,{
+//   method:'PATCH',
+//   headers:{
+//     'content-type':'application/json',
+//     'authorization':`Bearer ${localStorage.getItem('accessToken')}`
+// },
+// body:JSON.stringify(payment)
+// })
 .then(res=>res.json())
 .then(data=>{
 setProcessing(false);

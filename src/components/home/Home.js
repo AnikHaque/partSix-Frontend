@@ -1,5 +1,5 @@
 import React from 'react'
-import { Banner } from '../banner/Banner'
+import Banner  from '../banner/Banner'
 import Navbar from '../navbar/Navbar'
 import { Sample } from '../sample/Sample'
 import { Tools } from '../tools/Tools'
@@ -19,6 +19,8 @@ import { Class } from '../class/Class'
 import { Count } from '../countup/Count'
 import { LiveClass } from '../liveclass/LiveClass'
 import { Transform } from '../transform/Transform'
+import { Use } from '../use/Use'
+import Doctor from '../Book Our Doctors/Doctor'
 
 export const Home = () => {
   return (
@@ -35,8 +37,12 @@ export const Home = () => {
         <br></br>
         <br></br>
         <br></br>
-       <Shop></Shop> 
+       <Doctor></Doctor>
        <br></br>
+        <br></br>
+        <br></br>
+        <Use></Use>
+        <br></br>
         <br></br>
         <br></br>
         <LiveClass></LiveClass>

@@ -1,0 +1,604 @@
+/* home page banner css file */
+.bannerbg{
+    background-image: url('https://doccure-react.dreamguystech.com/template/d368ebab89d653715a96b31ead9de731.jpg');
+    background-position: center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 768px;
+    
+    
+}
+.bannerbg1{
+    background-image: url('https://medical-clinic.cmsmasters.net/wp-content/uploads/2016/09/bg-1.jpg');
+    background-position: center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 768px;
+    
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .bannerbg{
+        background-image: url('https://doccure-react.dreamguystech.com/template/d368ebab89d653715a96b31ead9de731.jpg');
+        background-position: center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 450px;
+    }
+}
+
+/* second bannert bg */
+.scbgdraw {
+    background-image: url('https://medical-clinic.cmsmasters.net/wp-content/uploads/2016/09/bg-1.jpg');
+  
+    background-size: 7rem;
+    opacity: 1;
+    z-index: 1;
+    width: 10rem;
+    height: 5rem;
+    background-repeat: no-repeat;
+}
+
+.scbgdraw2{
+    background-image: url('https://medical-clinic.cmsmasters.net/wp-content/uploads/2016/09/bg-1.jpg');
+  
+    background-size: 7rem;
+    opacity: 1;
+    z-index: 1;
+    width: 10rem;
+    height: 5rem;
+    background-repeat: no-repeat;
+}
+
+.scbgdraw3{
+    background-image: url('https://medical-clinic.cmsmasters.net/wp-content/uploads/2016/09/bg-1.jpg');
+    float: left;
+    background-size: 10rem;
+    opacity: 1;
+    z-index: 1;
+    width: 10rem;
+    height: 8rem;
+    background-repeat: no-repeat;
+}
+
+
+/* ---------------------------------------- */
+/* what are you looking for services css file */
+/* ----------------------------------- */
+.featured{
+    background: #E5F1FB;
+    transition: .4s ease-out;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.featured:hover{
+    transform: translateY(5px );
+}
+
+.featured::before{
+    content: '';
+    position: absolute;
+    background-color: #0c7fdd;
+    left: 0;
+    width: 3px;
+    height: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    z-index: -1;
+    transition: ease-in .5s;
+}
+
+
+.featured:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+  .featured:hover .number{
+    color: white;
+    transition: ease-in .5s;
+}
+
+.featured:hover .explain{
+    color: white;
+    transition: ease-in .5s;
+}
+
+.featured:hover .tagline{
+    color: white;
+    transition: ease-in .5s;
+}
+
+.featured2{
+    background: #E3FFEF;;
+    transition: .4s ease-out;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.featured2:hover{
+    transform: translateY(5px );
+}
+
+.featured2::before{
+    content: '';
+    position: absolute;
+    background-color: #0c7fdd;
+    left: 0;
+    width: 3px;
+    height: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    z-index: -1;
+    transition: ease-in .5s;
+}
+
+
+.featured2:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+  .featured2:hover .number{
+    color: white;
+}
+
+.featured2:hover .explain{
+    color: white;
+    transition: ease-in .5s;
+}
+
+.featured2:hover .tagline{
+    color: white;
+    transition: ease-in .5s;
+}
+
+
+/* featured service 3 */
+
+.featured3{
+    background: #FFF3E6;
+    transition: .4s ease-out;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.featured3:hover{
+    transform: translateY(5px );
+}
+
+.featured3::before{
+    content: '';
+    position: absolute;
+    background-color: #0c7fdd;
+    left: 0;
+    width: 3px;
+    height: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    z-index: -1;
+    transition: ease-in .5s;
+}
+
+
+.featured3:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+  .featured3:hover .number{
+    color: white;
+}
+
+.featured3:hover .explain{
+    color: white;
+    transition: ease-in .5s;
+}
+
+.featured3:hover .tagline{
+    color: white;
+    transition: ease-in .5s;
+}
+
+/*---------------------------------
+ Docotrs book slider Home page 
+ -----------------------------------*/
+
+ .doctors-view {
+	margin-left: -10px !important;
+	margin-right: -10px !important;
+}
+
+.swiper-wrapper {
+	width: 350px !important;
+}
+.single-doctor {
+	border-radius: 10px;
+	box-shadow: 1px 2px 9px -3px rgba(99, 99, 99, 0.45);
+	margin-bottom: 10px;
+	padding: 4px ;
+}
+.doctor-description {
+	padding: 10px 10px 20px 10px;
+}
+
+.doctor-image {
+	border-radius: 10px 10px 0px 0px;
+	width: auto;
+	height: auto;
+}
+
+
+.doctor-category {
+	color: #1b82e2;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 0.01rem;
+}
+
+.doctor-name {
+	color: #3a4256;
+}
+
+.doctor-education {
+	font-size: 12px;
+	line-height: 1rem;
+	letter-spacing: 0.01rem;
+}
+
+.collapse-btn {
+	font-size: 13px;
+	margin-left: 5px;
+	color: #1b82e2;
+	cursor: pointer;
+}
+.department {
+	font-size: 15px;
+}
+
+.hospital {
+	font-size: 14px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	top: 200px !important;
+	color: #1b82e2 !important;
+}
+
+
+/* =====================
+-----&&review card css&&----
+====================== */
+
+
+
+figure.reviewmain {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+}
+figure.reviewmain * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+figure.reviewmain img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: 40px 0 0 10px;
+}
+figure.reviewmain blockquote {
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #E6E6E6;
+  padding: 25px 50px 30px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6em;
+
+}
+figure.reviewmain blockquote:before,
+figure.reviewmain blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.5;
+  font-style: normal;
+  color: #1b82e2;
+}
+figure.reviewmain blockquote:before {
+  top: 25px;
+  left: 20px;
+}
+figure.reviewmain blockquote:after {
+  content: "";
+  right: 20px;
+  bottom: 0;
+}
+figure.reviewmain .arrow {
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid rgb(152, 206, 250);
+  margin: 0;
+  position: absolute;
+}
+figure.reviewmain .author {
+  position: absolute;
+  bottom: 45px;
+  padding: 0 10px 0 120px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #1b82e2;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+}
+figure.reviewmain .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+figure.reviewmain .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 5px;
+}
+
+
+/*===================== 
+=home page acroodian
+===================== */
+/*Define Accordion box*/  
+.accordion {   
+  width:830px;  
+  overflow:hidden;   
+  margin:10px auto;   
+  color:#474747;   
+  background:whitesmoke;   
+  padding:10px;   
+}  
+.accordion section{   
+   float:left;  
+   overflow:hidden;   
+   color:#333;   
+   cursor:pointer;   
+   background: #1b82e29a;   
+   margin:3px;   
+}  
+.accordion section:hover {  
+   background:#1b82e2;  
+}  
+.accordion section p {   
+   display:none;   
+}  
+.accordion section:after{  
+   position:relative;  
+   font-size:25px;  
+   color:#000;  
+   font-weight:bold;  
+}  
+.accordion section:nth-child(1):after{ content:'1'; }  
+.accordion section:nth-child(2):after{ content:'2'; }  
+.accordion section:nth-child(3):after{ content:'3'; }  
+.accordion section:nth-child(4):after{ content:'4'; }  
+.accordion section:nth-child(5):after{ content:'5'; }  
+.accordion section:target {   
+   background:#FFF;   
+   padding:10px;  
+}  
+.accordion section:target:hover {   
+   background:#FFF;   
+}  
+.accordion section:target h2 {  
+   width:100%;  
+}  
+.accordion section:target h2 a{   
+   color:#333;   
+   padding:0;  
+}  
+.accordion section:target p {  
+   display:block;  
+}  
+.accordion section h2 a{  
+   padding:19px 10px;  
+   display:block;   
+   font-size:16px;   
+   font-weight:normal;  
+   color:#eee;   
+   text-decoration:none;   
+}  
+.horizontal section{   
+   width:5%;   
+   height:250px;   
+   -moz-transition: width 0.2s ease-out;   
+   -webkit-transition:width 0.2s ease-out;  
+   -o-transition:width 0.2s ease-out;  
+   transition:width 0.2s ease-out;  
+}  
+.horizontal section:after{  
+   top:140px;  
+   left:15px;  
+}  
+.horizontal section h2 {   
+  -webkit-transform:rotate(90deg);  
+  -moz-transform:rotate(90deg);  
+  -o-transform: rotate(90deg);  
+  transform: rotate(90deg);  
+  width:240px;   
+  position:relative;   
+  left:-100px;   
+  top:85px;  
+}   
+/*On mouse over open slide*/  
+.horizontal :target{   
+  width:73%;  
+  height:249px;   
+}  
+.horizontal :target h2{   
+  top:0px;  
+  left:0;  
+  -webkit-transform:rotate(0deg);  
+  -moz-transform:rotate(0deg);  
+  -o-transform: rotate(0deg);  
+  transform: rotate(0deg);   
+}      
+
+/* acrodian from mobiele */
+.bg-one,
+.bg-one ~ .content span{
+background-color:rgb(152, 206, 250);
+
+}
+
+.bg-two,
+.bg-two ~ .content span{
+background-color:rgb(152, 206, 250);
+
+}
+
+.bg-three,
+.bg-three ~ .content span{
+background-color:rgb(152, 206, 250);
+
+}
+
+.bg-four,
+.bg-four ~ .content span{
+background-color:rgb(152, 206, 250);
+
+}
+.bg-five,
+.bg-five ~ .content span{
+background-color:rgb(152, 206, 250);
+
+}
+.bg-six,
+.bg-six ~ .content span{
+background-color:#C25396;
+
+}
+
+.tabs-box{
+background-color: #3d4a60;
+color:#FFF;
+width:450px;
+margin:40px auto;
+box-shadow:0 0 10px rgba(0,0,0,.3)
+}
+.tabs-box .acord{
+position:relative;
+overflow:hidden;
+
+
+}
+.tabs-box .acord label{
+position:relative;
+z-index: 1000;
+display:block;
+padding:0 40px 0 67px;
+}
+.tabs-box .acord label i{
+display:block;
+position:absolute;
+top:0;
+right:0;
+width:40px;
+text-align: center;
+}
+.tabs-box .acord label,
+.tabs-box .acord label i,
+.tabs-box .acord i.fa-chevron-circle-down{
+height:40px;
+line-height: 40px;
+margin-bottom: 10px;
+}
+.tabs-box .acord i.fa-chevron-circle-down{
+position:absolute;
+z-index: 1111;
+top:0;
+left:0;
+width: 40px;
+text-align: center;
+-moz-transition:all .2s linear 0s;
+-webkit-transition:all .2s linear 0s;
+transition:all .2s linear 0s;
+}
+
+.tabs-box .acord input{
+display:none;
+}
+
+.tabs-box .content{
+position:relative;
+overflow:hidden;
+-moz-transition:height 1s linear 0s;
+-webkit-transition: height 1s linear 0s;
+transition: height 1s linear 0s;
+height:0;
+font-size:14px;
+line-height:22px;
+color:#e4e4e4;
+text-align:center;
+direction:ltr 
+}
+
+.tabs-box .content span.square{
+display: block;
+position: absolute;
+left: 10px;
+top: -17px;
+width: 20px;
+height: 20px;
+transform: rotate(45deg);
+}
+.tabs-box input[type="checkbox"]:checked ~ div.content{
+height:300px;
+padding:10px;
+}
+.tabs-box input[type="checkbox"]:checked ~ i.fa-chevron-circle-down{
+transform:rotate(180deg);
+}
+
+.containersnotfound{
+  min-height: 100vh;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

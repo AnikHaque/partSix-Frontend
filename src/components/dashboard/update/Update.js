@@ -23,7 +23,7 @@ const address = event.target.address.value;
 const image = event.target.image.value;
 
 const updated= {displayname,email,contact,address,image};
-const url = `https://dry-brook-75772.herokuapp.com/booking/${id}`;
+const url = `https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${id}`;
 fetch(url,{
     method:'PUT',
     headers:{

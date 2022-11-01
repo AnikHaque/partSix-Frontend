@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [foods, setFoods] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://dry-brook-75772.herokuapp.com/booking?email=${user.email}`,{
+        fetch(`https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking?patient=${user.email}`,{
             method:'GET',
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -23,7 +23,7 @@ const MyOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `https://dry-brook-75772.herokuapp.com/booking/${id}`;
+            const url = `https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${id}`;
             fetch(url,{
                 method:'DELETE'
 
@@ -43,33 +43,35 @@ const MyOrders = () => {
 
     return (
         <div className='bg-myorder'>
-            <h2 className='text-white font-bold text-center text-2xl pt-5'>My Orders: {foods.length}</h2>
+            <h2 className='text-white font-bold text-center text-2xl pt-5'>My Appointments: {foods.length}</h2>
             <div class="overflow-x-auto pt-10 pb-10">
                 <table class="table-compact w-full text-gray-400">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Course Name</th>
-                            <th>Price</th>
-                            <th>Address</th>
-                            <th></th>
-                            <th>Pay</th>
+                        <th></th>
+                <th>Booked Doctor</th>
+                <th>Date</th>
+                <th>Slot</th>
+                <th>Fees</th>
+                <th></th>
+                <th>Pay</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             foods.map((a, index) =><tr>
                                 <th>{index + 1}</th>
-                                <td className='text-center'>{a.coursename}</td>
-                                <td className='text-center'>$ {a.price}</td>
+                                <td className='text-center'>{a.treatment}</td>
+                                <td className='text-center'>$ {a.date}</td>
                                
-                                <td className='text-center'>{a.address}</td>
+                                <td className='text-center'>{a.slot}</td>
+                                <td className='text-center'>{a.fees}</td>
                                 <td className='text-center'>
                                 <button onClick={()=>handleDelete(a._id)} className='text-white btn-delete text-gray-400'>Delete</button>
                                 </td>
                                 <td className='text-center'>
-                                    {(a.price && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-course text-gray-400'>Pay</button></Link>}
-                                    {(a.price && a.paid) && <p className='text-green-400'>Paid</p>}
+                                    {(a.fees && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-course text-gray-400'>Pay</button></Link>}
+                                    {(a.fees && a.paid) && <p className='text-green-400'>Paid</p>}
                                     </td>
                                
                             </tr>)

@@ -7,7 +7,7 @@ import { Banner } from './components/banner/Banner';
 import {Routes,Route} from 'react-router-dom'
 import { Home } from './components/home/Home';
 
-import { Details } from './components/productdetails/Details';
+
 
 import SignUp from './components/login/SignUp';
 import RequireAuth from './components/login/RequireAuth';
@@ -27,6 +27,9 @@ import { Blogs } from './components/blogs/Blogs';
 import { BlogPage } from './components/blogpage/Blogpage';
 import AddCourses from './components/addtools/AddCourses';
 import { Payment } from './components/dashboard/Payment';
+import Details from './components/details/Details';
+import Appointment from '../src/components/appointment/Appointment';
+import MyAppointment from './components/appointment/MyAppointment';
 function App() {
   return (
     <div className="App">
@@ -37,7 +40,13 @@ function App() {
    <Route path="/shop" element={<Shop></Shop>} />
    <Route path="/about" element={<About></About>} />
    <Route path="/blogs" element={<BlogPage></BlogPage>} />
+   <Route path="/appointment" element={<Appointment></Appointment>} />
    <Route path="/update/:id" element={<Update></Update>} />
+   <Route path="/websitedoctors/:id" element={
+          <RequireAuth>
+            <Details></Details>
+          </RequireAuth>
+        } />
    <Route path="/parts/:id" element={
           <RequireAuth>
             <Details></Details>
@@ -48,6 +57,7 @@ function App() {
           <Route path="about" element={<About></About>}></Route>
           <Route path="allorders" element={<AllOrders/>}></Route>
           <Route path="myorders" element={<MyOrders/>}></Route>
+          <Route path="myappointment" element={<MyAppointment></MyAppointment>}></Route>
           <Route path="payment/:id" element={<Payment/>}></Route>
           <Route path="allusers" element={<AllUsers></AllUsers>}></Route>
          

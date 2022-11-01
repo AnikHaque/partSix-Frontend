@@ -11,7 +11,7 @@ const AllOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch('https://dry-brook-75772.herokuapp.com/booking',{
+            fetch('https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking',{
                 method:'GET',
                 headers:{
                     'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const AllOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `https://dry-brook-75772.herokuapp.com/booking/${id}`;
+            const url = `https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${id}`;
             fetch(url,{
                 method:'DELETE'
 
@@ -63,10 +63,10 @@ const AllOrders = () => {
                         {
                             appointments.map((a, index) =><tr>
                                 <th className='pb-3'>{index + 1}</th>
-                                <td className='text-center'>{a.email}</td>
-                                <td className='text-center'>{a.partsname}</td>
-                                <td className='text-center'>$ {a.price}</td>
-                                <td className='text-center'>{a.quantity}</td>
+                                <td className='text-center'>{a.patient}</td>
+                                <td className='text-center'>{a.patientName}</td>
+                                <td className='text-center'>$ {a.fees}</td>
+                                <td className='text-center'>{a.date}</td>
                                 <td className='text-center'>{a.address}</td>
                                 <td className='text-center'>
                                 <button  className='btn btn-course text-gray-400'>
