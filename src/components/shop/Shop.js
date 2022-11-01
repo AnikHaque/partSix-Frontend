@@ -9,8 +9,8 @@ export const Shop = () => {
         .then(data => setTools(data))
     },[])
   return (
-    <div>
-<h2 className=' text-center mb-5 text-title text-2xl'>Our Popular Courses</h2>
+    <div className='container mx-auto px-6'>
+<h2 className=' text-center mb-5 text-title text-2xl'>Browse by Specialities</h2>
 <div className='grid lg:grid-cols-3 sm:grid-cols-1  pt-10 pb-10'>
 
 {

@@ -1,0 +1,17 @@
+.card{
+    border: 1px solid gray;
+}
+
+.hhh{
+   box-shadow: 1px 1px 4px gray;
+}
+.hhh:hover{
+background-color: #1b82e2;
+transition: .4s ease-out;
+padding-left: -20px;
+padding-right: 20px;
+color: white;
+}
+.a-image{
+    border-radius: 50%;
+}

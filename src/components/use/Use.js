@@ -1,11 +1,12 @@
 import React from 'react';
+import headpain from '../../assets/Features-images/head_pain.png';
 import './Use.css';
 export const Use = () => {
   return (
     <div className='container mx-auto px-6 mb-[130px]'>
         
 <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1'>
-<img src='http://localhost:3001/static/media/head_pain.c5b3b3774d26d08a7bed.png' className='lg:max-w-lg'></img>
+<img src={headpain} className='lg:max-w-lg'></img>
 <div className='mr-10'>
     <h1 className='font-bold text-4xl mb-8 uppercase'>When to use <span className='text-[#1b82e2]'> SaveLife </span></h1>
     <div className='mb-5'>

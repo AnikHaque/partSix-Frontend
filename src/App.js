@@ -30,6 +30,7 @@ import { Payment } from './components/dashboard/Payment';
 import Details from './components/details/Details';
 import Appointment from '../src/components/appointment/Appointment';
 import MyAppointment from './components/appointment/MyAppointment';
+import AddNews from './components/addnews/AddNews';
 function App() {
   return (
     <div className="App">
@@ -54,7 +55,7 @@ function App() {
         } />
         <Route path="dashboard" element={<Dashboard />} >
         <Route index element={<DashboardHome></DashboardHome>}></Route>
-          <Route path="about" element={<About></About>}></Route>
+          <Route path="addnews" element={<AddNews></AddNews>}></Route>
           <Route path="allorders" element={<AllOrders/>}></Route>
           <Route path="myorders" element={<MyOrders/>}></Route>
           <Route path="myappointment" element={<MyAppointment></MyAppointment>}></Route>

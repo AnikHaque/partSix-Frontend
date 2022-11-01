@@ -21,6 +21,9 @@ import { LiveClass } from '../liveclass/LiveClass'
 import { Transform } from '../transform/Transform'
 import { Use } from '../use/Use'
 import Doctor from '../Book Our Doctors/Doctor'
+import Services from '../What are u looking fr/Services'
+import AvailableFeatures from '../AvailableFeatures/AvailableFeatures'
+import NewsLetter from '../newsletter/NewsLetter'
 
 export const Home = () => {
   return (
@@ -29,11 +32,15 @@ export const Home = () => {
         <br></br>
         <br></br>
         <br></br>
-        <Class></Class>
+        <Services></Services>
         <br></br>
         <br></br>
         <br></br>
-        <Count></Count>
+        <Shop></Shop>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Use></Use>
         <br></br>
         <br></br>
         <br></br>
@@ -41,22 +48,11 @@ export const Home = () => {
        <br></br>
         <br></br>
         <br></br>
-        <Use></Use>
+        <AvailableFeatures></AvailableFeatures>
         <br></br>
         <br></br>
         <br></br>
-        <LiveClass></LiveClass>
-        <br></br>
-        <br></br>
-        <br></br>
-        <Transform></Transform>
-        <br></br>
-        <br></br>
-        <br></br>
-        <Supporter></Supporter>   
-        <br></br>
-        <br></br>
-        <br></br>
+        <NewsLetter></NewsLetter>
     </div>
   )
 }
