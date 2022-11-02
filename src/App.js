@@ -36,6 +36,10 @@ import AddAmbulance from './components/addambulance/AddAmbulance';
 import AddReview from './components/addreview/AddReview';
 import Urology from './components/urology/Urology';
 import Orthopedic from './components/orthopedic/Orthopedic';
+import BloodBank from './components/BloodBank/BloodBank';
+import BloodDoner from './components/BloodDoner/BloodDoner';
+import BloodDonerList from './components/BloodDonerList/BloodDonerList';
+import { Blood } from './components/Blood';
 function App() {
   return (
     <div className="App">
@@ -44,7 +48,11 @@ function App() {
    <Route path="/" element={<Home></Home>} />
    <Route path="/addcourses" element={<AddCourses></AddCourses>} />
    <Route path="/shop" element={<Shop></Shop>} />
+   <Route path="/blood" element={<Blood></Blood>} />
    <Route path="/about" element={<About></About>} />
+   <Route path="/bloodbank" element={<BloodBank></BloodBank>} />
+   <Route path="/doner" element={<BloodDoner></BloodDoner>} />
+   <Route path="/donerlist" element={<BloodDonerList></BloodDonerList>} />
    <Route path="/uro" element={<Urology></Urology>} />
    <Route path="/ortho" element={<Orthopedic></Orthopedic>} />
    <Route path="/blogs" element={<BlogPage></BlogPage>} />

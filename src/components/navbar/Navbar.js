@@ -44,13 +44,10 @@ const Navbar = () => {
     <ul class="menu menu-horizontal p-0 font-bold">
       <li><Link to="/">Home</Link></li>
       <li><Link to="/about">About</Link></li>
-      <li><Link to="/shop">Shop</Link></li>
+      <li><Link to="/shop">Speacilities</Link></li>
+      <li><Link to="/blood">Blood Bank</Link></li>
       <li><Link to="/blogs">Blogs</Link></li>
-      <li><Link to="/portfolio">Portfolio</Link></li>
       <li><Link to="/contact">Contact</Link></li>
-      
-   
-    
     </ul>
   </div>
   <div class="navbar-end">

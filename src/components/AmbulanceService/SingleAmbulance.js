@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 
     const onSubmit = data =>{
         console.log(data);
-        axios.post("http://localhost:5000/ambooking",data)
+        axios.post("https://dry-brook-75772.herokuapp.com/ambooking",data)
         .then(res=>{
             
              alert("Ambulance Booked Successfully");
