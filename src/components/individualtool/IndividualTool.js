@@ -14,6 +14,7 @@ export const IndividualTool = (props) => {
 </div>
 <div>
 <h2 className="text-2xl">{name}</h2>
+<Link to ={name}></Link>
 </div>
     </div>
    

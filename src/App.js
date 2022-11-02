@@ -34,6 +34,8 @@ import AddNews from './components/addnews/AddNews';
 import NewsDetails from './components/newsdetails/NewsDetails';
 import AddAmbulance from './components/addambulance/AddAmbulance';
 import AddReview from './components/addreview/AddReview';
+import Urology from './components/urology/Urology';
+import Orthopedic from './components/orthopedic/Orthopedic';
 function App() {
   return (
     <div className="App">
@@ -43,6 +45,8 @@ function App() {
    <Route path="/addcourses" element={<AddCourses></AddCourses>} />
    <Route path="/shop" element={<Shop></Shop>} />
    <Route path="/about" element={<About></About>} />
+   <Route path="/uro" element={<Urology></Urology>} />
+   <Route path="/ortho" element={<Orthopedic></Orthopedic>} />
    <Route path="/blogs" element={<BlogPage></BlogPage>} />
    <Route path="/appointment" element={<Appointment></Appointment>} />
    <Route path="/update/:id" element={<Update></Update>} />
