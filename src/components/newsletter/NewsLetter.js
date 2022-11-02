@@ -2,7 +2,7 @@ import React from 'react'
 import './NewsLetter.css';
 const NewsLetter = () => {
   return (
-    <div className='news-letter container mx-auto px-6 p-3 mb-[130px]'>
+    <div className='news-letter container mx-auto px-6 p-3'>
        <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1'>
 <div className='text-center pb-5 '>
 <h1 className='font-bold text-white text-5xl pt-20 pb-4'>Grab Our Newsletter</h1>

@@ -20,7 +20,7 @@ const AddNews = () => {
     return (
         <div>
             
-            <h1 className='text-center text-4xl  mb-4  text-primary font-bold'>  <Typewriter 
+            <h1 className='text-center text-2xl  mb-4  text-primary font-bold'>  <Typewriter 
 options={{
 strings: [' Please add a Blog with Details : '],
 autoStart: true,
@@ -32,8 +32,8 @@ loop: true,
             
        
 
-<div className="card card-compact lg:max-w-lg bg-base-100 mx-auto">
-<div className="card-body">
+<div className=" lg:max-w-lg bg-base-100 mx-auto">
+<div className="">
 <form onSubmit={handleSubmit(onSubmit)}>
   
   <input {...register("name",)} placeholder="Blog Name" />

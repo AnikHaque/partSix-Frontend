@@ -24,6 +24,10 @@ import Doctor from '../Book Our Doctors/Doctor'
 import Services from '../What are u looking fr/Services'
 import AvailableFeatures from '../AvailableFeatures/AvailableFeatures'
 import NewsLetter from '../newsletter/NewsLetter'
+import News from '../news/News'
+import Ambulance from '../AmbulanceService/Ambulance'
+import Faq from '../Faq/Faq'
+import Reviewda from '../Review/Reviewda'
 
 export const Home = () => {
   return (
@@ -49,10 +53,18 @@ export const Home = () => {
         <br></br>
         <br></br>
         <AvailableFeatures></AvailableFeatures>
-        <br></br>
-        <br></br>
-        <br></br>
+        
+        <Ambulance></Ambulance>
         <NewsLetter></NewsLetter>
+        <News></News>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Faq></Faq>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Reviewda></Reviewda>
     </div>
   )
 }
