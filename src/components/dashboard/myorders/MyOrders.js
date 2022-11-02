@@ -42,7 +42,7 @@ const MyOrders = () => {
             }
 
     return (
-        <div className='bg-myorder'>
+        <div className=''>
             <h2 className='text-white font-bold text-center text-2xl pt-5'>My Appointments: {foods.length}</h2>
             <div class="overflow-x-auto pt-10 pb-10">
                 <table class="table-compact w-full text-gray-400">
@@ -70,7 +70,7 @@ const MyOrders = () => {
                                 <button onClick={()=>handleDelete(a._id)} className='text-white btn-delete text-gray-400'>Delete</button>
                                 </td>
                                 <td className='text-center'>
-                                    {(a.fees && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-course text-gray-400'>Pay</button></Link>}
+                                    {(a.fees && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-primary text-white-400'>Pay</button></Link>}
                                     {(a.fees && a.paid) && <p className='text-green-400'>Paid</p>}
                                     </td>
                                

@@ -63,11 +63,7 @@ setProcessing(true);
         {
           payment_method: {
             card: card,
-            billing_details: {
-              name: patientName,
-              email:patient,
-              
-            },
+           
           },
         },
       );

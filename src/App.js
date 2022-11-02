@@ -40,6 +40,7 @@ import BloodBank from './components/BloodBank/BloodBank';
 import BloodDoner from './components/BloodDoner/BloodDoner';
 import BloodDonerList from './components/BloodDonerList/BloodDonerList';
 import { Blood } from './components/Blood';
+import { Pay } from './components/dashboard/Pay';
 
 function App() {
   return (
@@ -82,7 +83,7 @@ function App() {
           <Route path="allorders" element={<AllOrders/>}></Route>
           <Route path="myorders" element={<MyOrders/>}></Route>
           <Route path="myappointment" element={<MyAppointment></MyAppointment>}></Route>
-          <Route path="payment/:id" element={<Payment/>}></Route>
+          <Route path="payment/:id" element={<Pay></Pay>}></Route>
           <Route path="allusers" element={<AllUsers></AllUsers>}></Route>
          
         </Route>
