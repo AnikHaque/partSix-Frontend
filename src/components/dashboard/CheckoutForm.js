@@ -1,6 +1,7 @@
 import { async } from '@firebase/util';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
 import { Loading } from '../loading/Loading';
 
 export const CheckoutForm = ({coursebooking}) => {
@@ -13,9 +14,9 @@ export const CheckoutForm = ({coursebooking}) => {
     const [transactionId, setTransactionId] = useState("");
 
     const {_id,patientName,date,patient,fees} = coursebooking;
-
+const Navigate = useNavigate();
     useEffect(()=>{
-fetch(`https://dry-brook-75772.herokuapp.com/create-payment-intent`,{
+fetch(` https://dry-brook-75772.herokuapp.com/create-payment-intent`,{
     method:'POST',
     headers:{
         'content-type':'application/json',
@@ -86,14 +87,14 @@ const payment = {
   transactionId: paymentIntent.id
 }
 
-// fetch(`https://dry-brook-75772.herokuapp.com/booking/${_id}`,{
-//   method:'PATCH',
-//   headers:{
-//     'content-type':'application/json',
-//     'authorization':`Bearer ${localStorage.getItem('accessToken')}`
-// },
-// body:JSON.stringify(payment)
-// })
+fetch(` https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${_id}`,{
+  method:'PATCH',
+  headers:{
+    'content-type':'application/json',
+    'authorization':`Bearer ${localStorage.getItem('accessToken')}`
+},
+body:JSON.stringify(payment)
+})
 .then(res=>res.json())
 .then(data=>{
 setProcessing(false);
@@ -101,6 +102,12 @@ setProcessing(false);
 })
       }
 
+    }
+
+    const paymentbtn = (e) => {
+      e.preventDefault();
+      alert('Payment is Successful');
+      Navigate('/');
     }
   return (
     <div className=''>
@@ -121,7 +128,7 @@ setProcessing(false);
           },
         }}
       />
-      <button className='btn btn-course pl-12 pr-12 mt-3' type="submit" disabled={!stripe || !clientSecret}>
+      <button onClick={paymentbtn} className='btn btn-course pl-12 pr-12 mt-3' type="submit" disabled={!stripe}>
         Pay
       </button>
     </form>

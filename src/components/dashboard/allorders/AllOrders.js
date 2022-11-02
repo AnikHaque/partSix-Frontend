@@ -11,7 +11,7 @@ const AllOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch('https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking',{
+            fetch(' https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking',{
                 method:'GET',
                 headers:{
                     'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const AllOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${id}`;
+            const url = ` https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${id}`;
             fetch(url,{
                 method:'DELETE'
 

@@ -11,7 +11,7 @@ const NewsDetails = () => {
     const [parts,setParts] = useState({})
     const [disable, setDisable] = useState(false);
      useEffect(()=>{
-         fetch(`https://dry-brook-75772.herokuapp.com/news/${id}`)
+         fetch(` https://dry-brook-75772.herokuapp.com/news/${id}`)
        .then(res=>res.json())
         .then(data=>setParts(data))
 

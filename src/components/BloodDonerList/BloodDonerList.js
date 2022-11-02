@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 const BloodDonerList = () => {
     const [donerList, setDonerList] = React.useState([])
     useEffect(() => {
-        fetch("https://dry-brook-75772.herokuapp.com/bloodDonerList")
+        fetch(" https://dry-brook-75772.herokuapp.com/bloodDonerList")
             .then(res => res.json())
             .then(data => setDonerList(data))
     }, [])

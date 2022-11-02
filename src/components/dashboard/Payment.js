@@ -10,10 +10,10 @@ const stripePromise = loadStripe('pk_test_51LpZwZGWuhjNp2K6pFzfxzpHQUhiTt4zlADTa
 
 export const Payment = () => {
     const {id} = useParams();
-    const url = `https://dry-brook-75772.herokuapp.com/booking/${id}`;
+    const url = ` https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${id}`;
     console.log(url);
 
-    const {data:coursebooking,isLoading} = useQuery(['booking',id], ()=>fetch(url).then(res=>res.json()))
+    const {data:coursebooking,isLoading} = useQuery(['hospitaldoctorsbooking',id], ()=>fetch(url).then(res=>res.json()))
 
         if(isLoading){
             return <Loading></Loading>
@@ -22,7 +22,7 @@ export const Payment = () => {
     <div>
 <div className="card w-96 bg-myorder mx-auto mt-12 shadow-xl">
   <div className="card-body">
-    <h2 className="card-title font-bold">Hello! <span className='text-white'>{coursebooking.name}</span></h2>
+    <h2 className="card-title font-bold">Hello! <span className='text-white'>{coursebooking.patientName}</span></h2>
     <h2 className="font-bold text-green-300">Please pay for <b className='text-white'>{coursebooking.coursename}</b></h2>
     <p>Please Pay $ <span className='font-bold text-secondary'>{coursebooking.price}</span></p>
    
