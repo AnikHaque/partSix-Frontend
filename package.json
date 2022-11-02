@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-icons/all-files": "^4.1.0",
     "@stripe/react-stripe-js": "^1.14.1",
     "@stripe/stripe-js": "^1.42.1",
     "@testing-library/jest-dom": "^5.16.4",
