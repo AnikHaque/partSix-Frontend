@@ -44,6 +44,8 @@ import { Pay } from './components/dashboard/Pay';
 import AddMedicine from './components/addmedicine/AddMedicine';
 import Medicine from './components/medicine/Medicine';
 import MDetails from './components/medicine/MDetails';
+import  UroDetails  from './components/urology/UroDetails';
+import OrthoDetails from './components/orthopedic/OrthoDetails';
 
 function App() {
   return (
@@ -65,6 +67,8 @@ function App() {
    <Route path="/appointment" element={<Appointment></Appointment>} />
    <Route path="/update/:id" element={<Update></Update>} />
    <Route path="/medicine/:id" element={<MDetails></MDetails>} />
+   <Route path="/uro/:id" element={<UroDetails></UroDetails>} />
+   <Route path="/ortho/:id" element={<OrthoDetails></OrthoDetails>} />
    <Route path="/websitedoctors/:id" element={
           <RequireAuth>
             <Details></Details>

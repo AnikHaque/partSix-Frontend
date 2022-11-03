@@ -99,7 +99,7 @@ const Uro = ({ doctor }) => {
                     {/* <AiFillCalendar></AiFillCalendar> */}
                   </span>{" "}
                   <span className="mx-2 text-[16px]  ">
-                    <Link to={`/websitedoctors/${_id}`}>
+                    <Link to={`/uro/${_id}`}>
                        View Profile
                     </Link>
                   </span>{" "}
