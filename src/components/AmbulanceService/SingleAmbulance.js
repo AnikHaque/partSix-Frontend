@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './SingleAmbulance.css';
 import { toast } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+
  const SingleAmbulance = ({ambulances}) => {
+  const [user] = useAuthState(auth);
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data =>{
@@ -41,26 +45,21 @@ import { toast } from 'react-toastify';
     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
     <form onSubmit={handleSubmit(onSubmit)} className="bg-details text-center w-75 mx-auto pt-5 pb-5  pe-5 mb-5">
       <h1 className='font-bold text-2xl mb-1 text-primary'>Please Make a Booking: </h1>
-         <input  {...register("email", { required: true, maxLength: 120 })} placeholder="email" className='input input-bordered w-full max-w-xs drop-shadow-md text-black mb-1'  />
+         <input  {...register("email", { required: true, maxLength: 120 })} placeholder="email" className='input input-bordered w-full max-w-xs drop-shadow-md text-black mb-1' defaultValue={user.email} />
         
      
-         <input {...register("name", { required: true, maxLength: 520 })} placeholder="name" className='input input-bordered w-full max-w-xs drop-shadow-md text-black mb-1'  />
-         
-    
-         <input {...register("coursename", { required: true, maxLength: 1520 })} placeholder="Course Name" className='input input-bordered w-full max-w-xs drop-shadow-lg mb-1'  />
-    
+         <input {...register("name", { required: true, maxLength: 520 })} placeholder=" Ambulance name" className='input input-bordered w-full max-w-xs drop-shadow-md text-black mb-1'  />
+       
+         <input type="text" {...register("price")}placeholder="Ambulance Price" className='input input-bordered w-full max-w-xs drop-shadow-lg mb-1'  />
     
     
-         <input type="text" {...register("price")}placeholder="Course Price" className='input input-bordered w-full max-w-xs drop-shadow-lg mb-1'  />
-    
-    
-    <input {...register("image", { required: true, maxLength: 1920 })} placeholder="Course Image" className='input input-bordered w-full max-w-xs drop-shadow-lg mb-1'  />
+    <input {...register("image", { required: true, maxLength: 1920 })} placeholder="Ambulance Image" className='input input-bordered w-full max-w-xs drop-shadow-lg mb-1'  />
     
          
     
     
     
-         <input {...register("address", { required: true, })} placeholder="User Address" className='input input-bordered w-full max-w-xs drop-shadow-lg'/>
+         <input {...register("address", { required: true, })} placeholder="Address" className='input input-bordered w-full max-w-xs drop-shadow-lg'/>
       
     
          
