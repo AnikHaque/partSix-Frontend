@@ -4,7 +4,7 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('http://localhost:5000');
+const socket = io('https://dry-brook-75772.herokuapp.com');
 // const socket = io('backend code');
 
 const ContextProvider = ({ children }) => {

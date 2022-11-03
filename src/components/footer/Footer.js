@@ -41,7 +41,6 @@ export const Footer = () => {
         <footer className='bg-white'>
             <section className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 md:gap-0 w-[90vw] mx-auto py-10'>
                 <div className='flex flex-col justify-items-start items-start'>
-                    
                     <p className='text-left'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ipsa assumenda eveniet quasi, culpa dignissimos fugit molestias adipisci corporis laborum ab ipsam! Vel facere similique quos aliquam repudiandae temporibus minus?</p>
                     <div className='flex justify-around'>
                         <BsInstagram className='mx-2 inline-block' /> <BsLinkedin className='mx-2 inline-block' /> <BsFacebook className='mx-2 inline-block' /> <BsTwitter className='mx-2 inline-block' />

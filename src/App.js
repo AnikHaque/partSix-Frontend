@@ -41,6 +41,9 @@ import BloodDoner from './components/BloodDoner/BloodDoner';
 import BloodDonerList from './components/BloodDonerList/BloodDonerList';
 import { Blood } from './components/Blood';
 import { Pay } from './components/dashboard/Pay';
+import AddMedicine from './components/addmedicine/AddMedicine';
+import Medicine from './components/medicine/Medicine';
+import MDetails from './components/medicine/MDetails';
 
 function App() {
   return (
@@ -50,6 +53,7 @@ function App() {
    <Route path="/" element={<Home></Home>} />
    <Route path="/addcourses" element={<AddCourses></AddCourses>} />
    <Route path="/shop" element={<Shop></Shop>} />
+   <Route path="/medicine" element={<Medicine></Medicine>} />
    <Route path="/blood" element={<Blood></Blood>} />
    <Route path="/about" element={<About></About>} />
    <Route path="/bloodbank" element={<BloodBank></BloodBank>} />
@@ -60,6 +64,7 @@ function App() {
    <Route path="/blogs" element={<BlogPage></BlogPage>} />
    <Route path="/appointment" element={<Appointment></Appointment>} />
    <Route path="/update/:id" element={<Update></Update>} />
+   <Route path="/medicine/:id" element={<MDetails></MDetails>} />
    <Route path="/websitedoctors/:id" element={
           <RequireAuth>
             <Details></Details>
@@ -77,6 +82,7 @@ function App() {
         } />
         <Route path="dashboard" element={<Dashboard />} >
         <Route index element={<DashboardHome></DashboardHome>}></Route>
+          <Route path="addmedicine" element={<AddMedicine></AddMedicine>}></Route>
           <Route path="addnews" element={<AddNews></AddNews>}></Route>
           <Route path="addreview" element={<AddReview></AddReview>}></Route>
           <Route path="addambulance" element={<AddAmbulance></AddAmbulance>}></Route>
