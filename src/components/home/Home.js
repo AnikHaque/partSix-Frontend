@@ -28,6 +28,7 @@ import News from '../news/News'
 import Ambulance from '../AmbulanceService/Ambulance'
 import Faq from '../Faq/Faq'
 import Reviewda from '../Review/Reviewda'
+import Specialty  from '../specialities/Speciality'
 
 export const Home = () => {
   return (
@@ -40,7 +41,7 @@ export const Home = () => {
         <br></br>
         <br></br>
         <br></br>
-        <Shop></Shop>
+        <Specialty></Specialty>
         <br></br>
         <br></br>
         <br></br>
