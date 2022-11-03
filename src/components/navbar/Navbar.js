@@ -15,7 +15,7 @@ const Navbar = () => {
     
   return (
     <div className=''>
-       <div class="navbar">
+       <div class="md:w-[80vw] md:rounded-full md:absolute md:top-[6%] md:left-[10%] navbar w-screen text-black bg-slate-100  mx-auto z-50 h-[60px]">
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -41,9 +41,8 @@ const Navbar = () => {
     </a>
   </div>
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal p-0 font-bold">
+    <ul class="menu menu-horizontal p-0">
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
       <li><Link to="/shop">Speacilities</Link></li>
       <li><Link to="/blood">Blood Bank</Link></li>
       <li><Link to="/medicine">Pharmacy</Link></li>
@@ -55,9 +54,9 @@ const Navbar = () => {
   <Link className='mr-20 font-bold' to="/dashboard">Dashboard</Link>
   {
     user ? 
-    <button className="btn btn-banner"  onClick={logout} >Sign Out</button>
+    <button className="btn btn-primary text-white rounded-full"  onClick={logout} >Sign Out</button>
     :
-    <Link to="/login" className='btn btn-banner  text-white font-bold'>Login</Link>
+    <Link to="/login" className='btn btn-primary  text-white rounded-full'>Login</Link>
   }
   </div>
 </div>

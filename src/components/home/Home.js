@@ -34,7 +34,7 @@ import { NavigationBar } from '../NavigationBar'
 export const Home = () => {
   return (
     <div>
-      
+     
         <Banner></Banner>
         <br></br>
         <br></br>
