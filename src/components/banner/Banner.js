@@ -9,11 +9,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./Homecomponents.css";
-
+import Navbar from "../navbar/Navbar";
+import './Banner.css'
 
 const Banner = () => {
   return (
-    <div>
+    <div className="">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -32,8 +33,11 @@ const Banner = () => {
         <SwiperSlide>
         <div className="">
             <div className="bannerbg flex justify-end items-center ">
+            
               <div className="flex">
+             
                 <div className="mr-[30px] text-[33px] text-left font-extrabold text-white uppercase container p-2">
+               
                   <p >
                     our best doctor are ready for you
                     <br /> just make an{" "}

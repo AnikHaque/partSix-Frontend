@@ -46,11 +46,12 @@ import Medicine from './components/medicine/Medicine';
 import MDetails from './components/medicine/MDetails';
 import  UroDetails  from './components/urology/UroDetails';
 import OrthoDetails from './components/orthopedic/OrthoDetails';
+import { NavigationBar } from './components/NavigationBar';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar> 
+      <Navbar></Navbar>
    <Routes>
    <Route path="/" element={<Home></Home>} />
    <Route path="/addcourses" element={<AddCourses></AddCourses>} />

@@ -29,10 +29,12 @@ import Ambulance from '../AmbulanceService/Ambulance'
 import Faq from '../Faq/Faq'
 import Reviewda from '../Review/Reviewda'
 import Specialty  from '../specialities/Speciality'
+import { NavigationBar } from '../NavigationBar'
 
 export const Home = () => {
   return (
     <div>
+      
         <Banner></Banner>
         <br></br>
         <br></br>
