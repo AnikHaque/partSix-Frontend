@@ -49,6 +49,7 @@ import OrthoDetails from './components/orthopedic/OrthoDetails';
 import { NavigationBar } from './components/NavigationBar';
 import MyMedicine from './components/dashboard/mymedicine/MyMedicine';
 import AllMedicineOrder from './components/dashboard/allmedicineorders/AllMedicineOrder';
+import { MedPay } from './components/medpayment/MedPay';
 
 function App() {
   return (
@@ -98,6 +99,7 @@ function App() {
           <Route path="myappointment" element={<MyAppointment></MyAppointment>}></Route>
           <Route path="mymedicine" element={<MyMedicine></MyMedicine>}></Route>
           <Route path="payment/:id" element={<Pay></Pay>}></Route>
+          <Route path="pay/:id" element={<MedPay></MedPay>}></Route>
           <Route path="allusers" element={<AllUsers></AllUsers>}></Route>
           <Route path="allmedicine" element={<AllMedicineOrder></AllMedicineOrder>}></Route>
          

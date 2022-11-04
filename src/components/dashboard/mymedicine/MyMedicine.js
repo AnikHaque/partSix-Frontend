@@ -70,8 +70,8 @@ const MyMedicine = () => {
                                 <button onClick={()=>handleDelete(a._id)} className='text-white btn-delete text-gray-400'>Delete</button>
                                 </td>
                                 <td className='text-center'>
-                                    {(a.fees && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-primary text-white-400'>Pay</button></Link>}
-                                    {(a.fees && a.paid) && <p className='text-green-400'>Paid</p>}
+                                    {(a.price && !a.paid) && <Link to={`/dashboard/pay/${a._id}`}><button className='btn btn-primary text-white-400'>Pay</button></Link>}
+                                    {(a.price && a.paid) && <p className='text-green-400'>Paid</p>}
                                     </td>
                                
                             </tr>)
