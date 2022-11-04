@@ -53,29 +53,14 @@ import auth from '../../firebase.init';
          <input type="text" {...register("price")}placeholder="Ambulance Price" className='input input-bordered w-full max-w-xs drop-shadow-lg mb-1'  />
     
     
-    <input {...register("image", { required: true, maxLength: 1920 })} placeholder="Ambulance Image" className='input input-bordered w-full max-w-xs drop-shadow-lg mb-1'  />
-    
-         
-    
-    
+        <input {...register("image", { required: true, maxLength: 1920 })} placeholder="Ambulance Image" className='input input-bordered w-full max-w-xs drop-shadow-lg mb-1'  />
     
          <input {...register("address", { required: true, })} placeholder="Address" className='input input-bordered w-full max-w-xs drop-shadow-lg'/>
-      
-    
-         
-       
+
          <input type="submit" className='w-80 btn btn-primary shadow-banner' value='Book Ambulance' />
        </form>
   </div>
 </div>
-
-{/* <div className="modal">
-  <div className="modal-box relative">
-    <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-    <h3 className="text-lg font-bold">Congratulations random Internet user!</h3>
-    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-  </div>
-</div> */}
     </div>
   </div>
 </div>

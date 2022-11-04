@@ -23,7 +23,7 @@ import './MDetails.css';
 
      const onSubmit = data =>{
         console.log(data);
-        axios.post(" http://localhost:5000/medicinebooking",data)
+        axios.post(" https://dry-brook-75772.herokuapp.com/medicinebooking",data)
         .then(res=>{
             if(res.data.insertedId){
                alert("Added Successfully.")

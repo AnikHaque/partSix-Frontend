@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 
-const AllOrders = () => {
+const AllMedicineOrder = () => {
 
     const [appointments, setAppointments] = useState([]);
     const [user] = useAuthState(auth);
 
     useEffect(() => {
         if (user) {
-            fetch(' https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking',{
+            fetch(' https://dry-brook-75772.herokuapp.com/medicinebooking',{
                 method:'GET',
                 headers:{
                     'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const AllOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = ` https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${id}`;
+            const url = ` https://dry-brook-75772.herokuapp.com/medicinebooking/${id}`;
             fetch(url,{
                 method:'DELETE'
 
@@ -52,10 +52,9 @@ const AllOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Booked By</th>
-                            <th>Product Name</th>
+                            <th>Ordered By</th>
+                            <th>Medicine Name</th>
                             <th>Price</th>
-                            <th>Quantity</th>
                             <th>Delivery Address</th>
                         </tr>
                     </thead>
@@ -63,18 +62,17 @@ const AllOrders = () => {
                         {
                             appointments.map((a, index) =><tr>
                                 <th className='pb-3'>{index + 1}</th>
-                                <td className='text-center'>{a.patient}</td>
-                                <td className='text-center'>{a.patientName}</td>
-                                <td className='text-center'>$ {a.fees}</td>
-                                <td className='text-center'>{a.date}</td>
+                                <td className='text-center'>{a.email}</td>
+                                <td className='text-center'>{a.name}</td>
+                                <td className='text-center'>$ {a.price}</td>
                                 <td className='text-center'>{a.address}</td>
                                 <td className='text-center'>
-                                <button  className='btn btn-course text-gray-400'>
+                                <button  className='btn btn-primary text-white-400'>
     <Link to={`/update/${a._id}`}>Edit</Link>
    </button>
                                 </td>
                                 <td className='text-center'>
-                                <button onClick={()=>handleDelete(a._id)} className=' btn btn-error text-white'>Delete</button>
+                                <button onClick={()=>handleDelete(a._id)} className=' btn bg-red-600 text-white'>Delete</button>
                                 </td>
                                
                                 
@@ -89,4 +87,4 @@ const AllOrders = () => {
     );
 };
 
-export default AllOrders;
+export default AllMedicineOrder;
