@@ -57,7 +57,7 @@ export const Home = () => {
         <br></br>
         <AvailableFeatures></AvailableFeatures>
         
-        <Ambulance></Ambulance>
+        {/* <Ambulance></Ambulance> */}
         <NewsLetter></NewsLetter>
         <News></News>
         <br></br>
