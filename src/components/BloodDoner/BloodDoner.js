@@ -26,7 +26,7 @@ const BloodDoner = () => {
             age: e?.target?.age?.value,
         }
         console.log(donerInfo)
-        fetch(' https://dry-brook-75772.herokuapp.com/bloodDoner', {
+        fetch('  https://whispering-bayou-93638.herokuapp.com/bloodDoner', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

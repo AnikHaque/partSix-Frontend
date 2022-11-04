@@ -13,7 +13,7 @@ const handlePay = () => {
 }
 const {price,name,email} = appointment
 useEffect(()=>{
-fetch('https://dry-brook-75772.herokuapp.com/create-payment-intent',{
+fetch(' https://whispering-bayou-93638.herokuapp.com/create-payment-intent',{
     method: 'POST',
     headers:{
         'content-type': 'application/json',

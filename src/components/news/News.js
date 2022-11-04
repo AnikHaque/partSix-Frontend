@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const News = () => {
   const [tools, setTools] = useState([])
   useEffect(() => {
-    fetch(' https://dry-brook-75772.herokuapp.com/news')
+    fetch('  https://whispering-bayou-93638.herokuapp.com/news')
       .then(res => res.json())
       .then(data => setTools(data))
   }, [])

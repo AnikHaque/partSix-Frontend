@@ -13,7 +13,7 @@ export const Details = () => {
     const [parts,setParts] = useState({})
     const [disable, setDisable] = useState(false);
      useEffect(()=>{
-         fetch(` https://dry-brook-75772.herokuapp.com/parts/${id}`)
+         fetch(`  https://whispering-bayou-93638.herokuapp.com/parts/${id}`)
        .then(res=>res.json())
         .then(data=>setParts(data))
 
@@ -22,7 +22,7 @@ export const Details = () => {
 
      const onSubmit = data =>{
         console.log(data);
-        axios.post(" https://dry-brook-75772.herokuapp.com/booking",data)
+        axios.post("  https://whispering-bayou-93638.herokuapp.com/booking",data)
         .then(res=>{
             if(res.data.insertedId){
                alert("Added Successfully.")

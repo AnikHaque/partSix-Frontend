@@ -13,7 +13,7 @@ import auth from '../../firebase.init';
 
     const onSubmit = data =>{
         console.log(data);
-        axios.post(" https://dry-brook-75772.herokuapp.com/ambooking",data)
+        axios.post("  https://whispering-bayou-93638.herokuapp.com/ambooking",data)
         .then(res=>{
             
              alert("Ambulance Booked Successfully");

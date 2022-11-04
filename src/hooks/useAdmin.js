@@ -6,7 +6,7 @@ const useAdmin = user => {
     useEffect( () =>{
         const email = user?.email;
         if(email){
-            fetch(` https://dry-brook-75772.herokuapp.com/admin/${email}`, {
+            fetch(`  https://whispering-bayou-93638.herokuapp.com/admin/${email}`, {
                 method:'GET',
                 headers: {
                     'content-type': 'application/json',
