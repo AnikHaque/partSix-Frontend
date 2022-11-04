@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51LpZwZGWuhjNp2K6pFzfxzpHQUhiTt4zlADTa
 
 export const Payment = () => {
     const {id} = useParams();
-    const url = ` https://part-six-server-side.vercel.app/hospitaldoctorsbooking/${id}`;
+    const url = ` https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${id}`;
     console.log(url);
 
     const {data:coursebooking,isLoading} = useQuery(['hospitaldoctorsbooking',id], ()=>fetch(url).then(res=>res.json()))

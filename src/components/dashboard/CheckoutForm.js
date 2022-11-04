@@ -16,7 +16,7 @@ export const CheckoutForm = ({coursebooking}) => {
     const {_id,patientName,date,patient,fees} = coursebooking;
 const Navigate = useNavigate();
     useEffect(()=>{
-fetch(` https://part-six-server-side.vercel.app/create-payment-intent`,{
+fetch(` https://dry-brook-75772.herokuapp.com/create-payment-intent`,{
     method:'POST',
     headers:{
         'content-type':'application/json',
@@ -83,7 +83,7 @@ const payment = {
   transactionId: paymentIntent.id
 }
 
-fetch(` https://part-six-server-side.vercel.app/hospitaldoctorsbooking/${_id}`,{
+fetch(` https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking/${_id}`,{
   method:'PATCH',
   headers:{
     'content-type':'application/json',

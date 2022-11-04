@@ -14,7 +14,7 @@ import './MDetails.css';
     const [parts,setParts] = useState({})
     const [disable, setDisable] = useState(false);
      useEffect(()=>{
-         fetch(`https://part-six-server-side.vercel.app/mdetails/${id}`)
+         fetch(`https://dry-brook-75772.herokuapp.com/mdetails/${id}`)
        .then(res=>res.json())
         .then(data=>setParts(data))
 
@@ -23,7 +23,7 @@ import './MDetails.css';
 
      const onSubmit = data =>{
         console.log(data);
-        axios.post(" https://part-six-server-side.vercel.app/medicinebooking",data)
+        axios.post(" https://dry-brook-75772.herokuapp.com/medicinebooking",data)
         .then(res=>{
             if(res.data.insertedId){
                alert("Added Successfully.")

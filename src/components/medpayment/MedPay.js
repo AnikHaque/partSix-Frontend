@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51LzkrZG7vHJjeI7EHjSOU97FxNeQ1yPZ78Y4t
 
 export const MedPay = () => {
     const {id} = useParams();
-    const url = `https://part-six-server-side.vercel.app/medicinebooking/${id}`;
+    const url = `https://dry-brook-75772.herokuapp.com/medicinebooking/${id}`;
     const {data:appointment,isLoading} = useQuery(['medicinebooking',id],()=>fetch(url,{
       method:'GET',
             headers:{

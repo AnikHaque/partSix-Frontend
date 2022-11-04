@@ -7,7 +7,7 @@ import Medicines from './Medicines';
 const Medicine = () => {
   const [medicine,setMedicine] = useState([])
     useEffect(()=>{
-        fetch(' https://part-six-server-side.vercel.app/medicine')
+        fetch(' https://dry-brook-75772.herokuapp.com/medicine')
         .then(res => res.json())
         .then(data => setMedicine(data))
     },[])

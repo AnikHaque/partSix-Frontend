@@ -9,7 +9,7 @@ const UroDetails = () => {
     const [docs,setDocs] = useState({})
     const [disable, setDisable] = useState(false);
      useEffect(()=>{
-         fetch(` https://part-six-server-side.vercel.app/urodetails/${id}`)
+         fetch(` https://dry-brook-75772.herokuapp.com/urodetails/${id}`)
        .then(res=>res.json())
         .then(data=>setDocs(data))
      },[])

@@ -11,7 +11,7 @@ const MyAppointment = () => {
   const [user,loading] = useAuthState(auth);
   useEffect(() => {
 
-    fetch(` https://part-six-server-side.vercel.app/hospitaldoctorsbooking?patient=${user.email}`)
+    fetch(` https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking?patient=${user.email}`)
       .then(res => res.json())
       .then(data => setAppointments(data))
 

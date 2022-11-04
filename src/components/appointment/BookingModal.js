@@ -27,7 +27,7 @@ const BookingModal = ({treatment,date,setTreatment,refetch}) => {
         }
         
 
-        fetch(' https://part-six-server-side.vercel.app/hospitaldoctorsbooking',{
+        fetch(' https://dry-brook-75772.herokuapp.com/hospitaldoctorsbooking',{
           method: 'POST',
           headers:{
             'content-type': 'application/json'
