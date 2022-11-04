@@ -9,7 +9,7 @@ const OrthoDetails = () => {
     const [docs,setDocs] = useState({})
     const [disable, setDisable] = useState(false);
      useEffect(()=>{
-         fetch(` https://dry-brook-75772.herokuapp.com/Orthodetails/${id}`)
+         fetch(` https://part-six-server-side.vercel.app/Orthodetails/${id}`)
        .then(res=>res.json())
         .then(data=>setDocs(data))
      },[])

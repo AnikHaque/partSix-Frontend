@@ -167,7 +167,7 @@ const Orthopedic = () => {
 
 const [urology,setUrology] = useState([])
     useEffect(()=>{
-        fetch(' https://dry-brook-75772.herokuapp.com/orthopedic')
+        fetch(' https://part-six-server-side.vercel.app/orthopedic')
         .then(res => res.json())
         .then(data => setUrology(data))
     },[])

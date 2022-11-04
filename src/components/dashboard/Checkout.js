@@ -11,7 +11,7 @@ const [success, setSuccess] = useState('');
 
 const {fees,patient,patientName} = appointment
 useEffect(()=>{
-fetch('https://dry-brook-75772.herokuapp.com/create-payment-intent',{
+fetch('https://part-six-server-side.vercel.app/create-payment-intent',{
     method: 'POST',
     headers:{
         'content-type': 'application/json',

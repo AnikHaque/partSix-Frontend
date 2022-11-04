@@ -12,7 +12,7 @@ import Reviewdg from "./Reviewdg";
 const Reviewda = () => {
   const [reviews,setReviews] = useState([])
     useEffect(()=>{
-        fetch(' https://dry-brook-75772.herokuapp.com/reviews')
+        fetch(' https://part-six-server-side.vercel.app/reviews')
         .then(res => res.json())
         .then(data => setReviews(data))
     },[])
