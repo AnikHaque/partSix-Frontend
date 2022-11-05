@@ -30,6 +30,7 @@ import Faq from '../Faq/Faq'
 import Reviewda from '../Review/Reviewda'
 import Specialty  from '../specialities/Speciality'
 import { NavigationBar } from '../NavigationBar'
+import { Contact } from '../Contact'
 
 export const Home = () => {
   return (
@@ -56,7 +57,7 @@ export const Home = () => {
         <br></br>
         <br></br>
         <AvailableFeatures></AvailableFeatures>
-        
+      
         {/* <Ambulance></Ambulance> */}
         <NewsLetter></NewsLetter>
         <News></News>

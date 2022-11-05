@@ -50,6 +50,7 @@ import { NavigationBar } from './components/NavigationBar';
 import MyMedicine from './components/dashboard/mymedicine/MyMedicine';
 import AllMedicineOrder from './components/dashboard/allmedicineorders/AllMedicineOrder';
 import { MedPay } from './components/medpayment/MedPay';
+import { Contact } from './components/Contact';
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
    <Route path="/blood" element={<Blood></Blood>} />
    <Route path="/about" element={<About></About>} />
    <Route path="/bloodbank" element={<BloodBank></BloodBank>} />
+   <Route path="/email" element={<Contact></Contact>} />
    <Route path="/doner" element={<BloodDoner></BloodDoner>} />
    <Route path="/donerlist" element={<BloodDonerList></BloodDonerList>} />
    <Route path="/uro" element={<Urology></Urology>} />
