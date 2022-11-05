@@ -9,7 +9,7 @@ const OrthoDetails = () => {
     const [docs,setDocs] = useState({})
     const [disable, setDisable] = useState(false);
      useEffect(()=>{
-         fetch(`  https://whispering-bayou-93638.herokuapp.com/Orthodetails/${id}`)
+         fetch(`  http://localhost:5000/Orthodetails/${id}`)
        .then(res=>res.json())
         .then(data=>setDocs(data))
      },[])

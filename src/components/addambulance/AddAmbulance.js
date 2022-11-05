@@ -8,7 +8,7 @@ const AddAmbulance = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('  https://whispering-bayou-93638.herokuapp.com/ambulance',data)
+        axios.post('  http://localhost:5000/ambulance',data)
         .then(res=>{
            if(res.data.insertedId){
                alert('Added Successfully');

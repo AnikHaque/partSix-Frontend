@@ -27,7 +27,7 @@ const BookingModal = ({treatment,date,setTreatment,refetch}) => {
         }
         
 
-        fetch('  https://whispering-bayou-93638.herokuapp.com/hospitaldoctorsbooking',{
+        fetch('  http://localhost:5000/hospitaldoctorsbooking',{
           method: 'POST',
           headers:{
             'content-type': 'application/json'

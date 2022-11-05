@@ -9,7 +9,7 @@ const MyMedicine = () => {
     const [foods, setFoods] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`  https://whispering-bayou-93638.herokuapp.com/medicinebooking?email=${user.email}`,{
+        fetch(`  http://localhost:5000/medicinebooking?email=${user.email}`,{
             method:'GET',
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -23,7 +23,7 @@ const MyMedicine = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `  https://whispering-bayou-93638.herokuapp.com/medicinebooking/${id}`;
+            const url = `  http://localhost:5000/medicinebooking/${id}`;
             fetch(url,{
                 method:'DELETE'
 

@@ -6,7 +6,7 @@ import SingleAmbulance from './SingleAmbulance';
 const Ambulance = () => {
   const [ambulance,setAmbulance] = useState([])
     useEffect(()=>{
-        fetch('  https://whispering-bayou-93638.herokuapp.com/ambulance')
+        fetch('  http://localhost:5000/ambulance')
         .then(res => res.json())
         .then(data => setAmbulance(data))
     },[])

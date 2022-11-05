@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { MessengerChat } from "react-messenger-chat-plugin";
 import './Contact.css';
 
 export const Contact = () => {
@@ -29,6 +30,38 @@ export const Contact = () => {
      
       <input type="submit" className='btn btn-primary' value="Send Email" />
     </form>
+
+
+
+    <MessengerChat
+    pageId="100070097834032"
+    language="sv_SE"
+    themeColor={"#000000"}
+    bottomSpacing={300}
+    loggedInGreeting="loggedInGreeting"
+    loggedOutGreeting="loggedOutGreeting"
+    greetingDialogDisplay={"show"}
+    debugMode={true}
+    onMessengerShow={() => {
+      console.log("onMessengerShow");
+    }}
+    onMessengerHide={() => {
+      console.log("onMessengerHide");
+    }}
+    onMessengerDialogShow={() => {
+      console.log("onMessengerDialogShow");
+    }}
+    onMessengerDialogHide={() => {
+      console.log("onMessengerDialogHide");
+    }}
+    onMessengerMounted={() => {
+      console.log("onMessengerMounted");
+    }}
+    onMessengerLoad={() => {
+      console.log("onMessengerLoad");
+    }}
+  />,
+
     </div>
   )
 }

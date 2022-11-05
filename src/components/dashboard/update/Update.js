@@ -6,7 +6,7 @@ export const Update = () => {
 const [info,setInfo] = useState({});
 useEffect(()=>{
 
-    const url = `  https://whispering-bayou-93638.herokuapp.com/booking/${id}`;
+    const url = `  http://localhost:5000/booking/${id}`;
     fetch(url)
     .then(res=>res.json())
 .then(data=>setInfo(data));
@@ -23,7 +23,7 @@ const address = event.target.address.value;
 const image = event.target.image.value;
 
 const updated= {displayname,email,contact,address,image};
-const url = `  https://whispering-bayou-93638.herokuapp.com/hospitaldoctorsbooking/${id}`;
+const url = `  http://localhost:5000/hospitaldoctorsbooking/${id}`;
 fetch(url,{
     method:'PUT',
     headers:{

@@ -16,7 +16,7 @@ export const CheckoutForm = ({coursebooking}) => {
     const {_id,patientName,date,patient,fees} = coursebooking;
 const Navigate = useNavigate();
     useEffect(()=>{
-fetch(`  https://whispering-bayou-93638.herokuapp.com/create-payment-intent`,{
+fetch(`  http://localhost:5000/create-payment-intent`,{
     method:'POST',
     headers:{
         'content-type':'application/json',
@@ -83,7 +83,7 @@ const payment = {
   transactionId: paymentIntent.id
 }
 
-fetch(`  https://whispering-bayou-93638.herokuapp.com/hospitaldoctorsbooking/${_id}`,{
+fetch(`  http://localhost:5000/hospitaldoctorsbooking/${_id}`,{
   method:'PATCH',
   headers:{
     'content-type':'application/json',

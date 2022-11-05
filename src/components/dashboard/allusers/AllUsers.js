@@ -4,7 +4,7 @@ import { Loading } from '../../loading/Loading';
 import UserRow from '../UserRow';
 
 export const AllUsers = () => {
-  const {data: users,isLoading,refetch} = useQuery('users',()=>fetch('  https://whispering-bayou-93638.herokuapp.com/user',{
+  const {data: users,isLoading,refetch} = useQuery('users',()=>fetch('  http://localhost:5000/user',{
   method:'GET',
   headers:{
     authorization: `Bearer ${localStorage.getItem('accessToken')}`

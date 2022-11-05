@@ -11,7 +11,7 @@ const AllOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch('  https://whispering-bayou-93638.herokuapp.com/hospitaldoctorsbooking',{
+            fetch('  http://localhost:5000/hospitaldoctorsbooking',{
                 method:'GET',
                 headers:{
                     'authorization':`Bearer ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const AllOrders = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if(proceed){
             console.log('deleting user with id',id);
-            const url = `  https://whispering-bayou-93638.herokuapp.com/hospitaldoctorsbooking/${id}`;
+            const url = `  http://localhost:5000/hospitaldoctorsbooking/${id}`;
             fetch(url,{
                 method:'DELETE'
 

@@ -8,12 +8,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
  const SingleAmbulance = ({ambulances}) => {
+  const {_id} = ambulances;
   const [user] = useAuthState(auth);
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data =>{
         console.log(data);
-        axios.post("  https://whispering-bayou-93638.herokuapp.com/ambooking",data)
+        axios.post("  http://localhost:5000/ambooking",data)
         .then(res=>{
             
              alert("Ambulance Booked Successfully");
@@ -36,8 +37,10 @@ import auth from '../../firebase.init';
     <p className='text-right'><b>$</b> {ambulances.price}</p>
     </div>
     <div className="card-actions justify-center">
-    
-    <label htmlFor="my-modal-3" className="btn btn-primary w-full">Book Ambulance</label>
+    <Link to={`/amdetails/${_id}`}>
+    <button className='btn btn-primary w-96 text-white'>Book Now</button>
+    </Link>
+    {/* <label htmlFor="my-modal-3" className="btn btn-primary w-full">Book Ambulance</label>
     <input type="checkbox" id="my-modal-3" className="modal-toggle" />
 
     <div className="modal">
@@ -60,7 +63,7 @@ import auth from '../../firebase.init';
          <input type="submit" className='w-80 btn btn-primary shadow-banner' value='Book Ambulance' />
        </form>
   </div>
-</div>
+</div> */}
     </div>
   </div>
 </div>

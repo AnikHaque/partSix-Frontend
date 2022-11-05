@@ -52,6 +52,7 @@ import AllMedicineOrder from './components/dashboard/allmedicineorders/AllMedici
 import { MedPay } from './components/medpayment/MedPay';
 import { Contact } from './components/Contact';
 import News from './components/news/News';
+import AmbulanceDetails from './components/AmbulanceService/AmbulanceDetails';
 
 function App() {
   return (
@@ -77,6 +78,7 @@ function App() {
    <Route path="/medicine/:id" element={<MDetails></MDetails>} />
    <Route path="/uro/:id" element={<UroDetails></UroDetails>} />
    <Route path="/ortho/:id" element={<OrthoDetails></OrthoDetails>} />
+   <Route path="/amdetails/:id" element={<AmbulanceDetails></AmbulanceDetails>} />
    <Route path="/websitedoctors/:id" element={
           <RequireAuth>
             <Details></Details>

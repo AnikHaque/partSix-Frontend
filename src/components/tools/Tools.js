@@ -5,7 +5,7 @@ import { IndividualTool } from '../individualtool/IndividualTool'
 export const Tools = () => {
     const [tools, setTools] = useState([])
     useEffect(()=>{
-        fetch('  https://whispering-bayou-93638.herokuapp.com/courses')
+        fetch('  http://localhost:5000/courses')
         .then(res => res.json())
         .then(data => setTools(data))
     },[])
