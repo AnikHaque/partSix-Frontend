@@ -31,6 +31,7 @@ import Reviewda from '../Review/Reviewda'
 import Specialty  from '../specialities/Speciality'
 import { NavigationBar } from '../NavigationBar'
 import { Contact } from '../Contact'
+import { UseWebsite } from '../usewebsite/UseWebsite'
 
 export const Home = () => {
   return (
@@ -60,15 +61,17 @@ export const Home = () => {
       
         <Ambulance></Ambulance>
         <NewsLetter></NewsLetter>
+        <UseWebsite></UseWebsite>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Reviewda></Reviewda>
         <News></News>
         <br></br>
         <br></br>
         <br></br>
         <Faq></Faq>
-        <br></br>
-        <br></br>
-        <br></br>
-        <Reviewda></Reviewda>
+        
     </div>
   )
 }
