@@ -51,6 +51,7 @@ import MyMedicine from './components/dashboard/mymedicine/MyMedicine';
 import AllMedicineOrder from './components/dashboard/allmedicineorders/AllMedicineOrder';
 import { MedPay } from './components/medpayment/MedPay';
 import { Contact } from './components/Contact';
+import News from './components/news/News';
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
    <Route path="/shop" element={<Shop></Shop>} />
    <Route path="/medicine" element={<Medicine></Medicine>} />
    <Route path="/blood" element={<Blood></Blood>} />
+   <Route path="/news" element={<News></News>}></Route>
    <Route path="/about" element={<About></About>} />
    <Route path="/bloodbank" element={<BloodBank></BloodBank>} />
    <Route path="/email" element={<Contact></Contact>} />
