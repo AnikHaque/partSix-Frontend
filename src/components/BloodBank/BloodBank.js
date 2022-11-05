@@ -8,7 +8,7 @@ const BloodBank = () => {
     });
     const [donerList, setDonerList] = React.useState([])
     React.useEffect(() => {
-        fetch("  http://localhost:5000/bloodDonerList")
+        fetch(" https://whispering-bayou-93638.herokuapp.com/bloodDonerList")
             .then(res => res.json())
             .then(data => setDonerList(data))
     }, [])

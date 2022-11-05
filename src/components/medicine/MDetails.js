@@ -14,7 +14,7 @@ import './MDetails.css';
     const [parts,setParts] = useState({})
     const [disable, setDisable] = useState(false);
      useEffect(()=>{
-         fetch(` http://localhost:5000/mdetails/${id}`)
+         fetch(`https://whispering-bayou-93638.herokuapp.com/mdetails/${id}`)
        .then(res=>res.json())
         .then(data=>setParts(data))
 
@@ -23,7 +23,7 @@ import './MDetails.css';
 
      const onSubmit = data =>{
         console.log(data);
-        axios.post("  http://localhost:5000/medicinebooking",data)
+        axios.post(" https://whispering-bayou-93638.herokuapp.com/medicinebooking",data)
         .then(res=>{
             if(res.data.insertedId){
                alert("Added Successfully.")

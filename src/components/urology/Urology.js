@@ -167,7 +167,7 @@ const Urology = () => {
 
 const [urology,setUrology] = useState([])
     useEffect(()=>{
-        fetch('  http://localhost:5000/urology')
+        fetch(' https://whispering-bayou-93638.herokuapp.com/urology')
         .then(res => res.json())
         .then(data => setUrology(data))
     },[])

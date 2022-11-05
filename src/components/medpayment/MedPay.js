@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51LzkrZG7vHJjeI7EHjSOU97FxNeQ1yPZ78Y4t
 
 export const MedPay = () => {
     const {id} = useParams();
-    const url = ` http://localhost:5000/medicinebooking/${id}`;
+    const url = `https://whispering-bayou-93638.herokuapp.com/medicinebooking/${id}`;
     const {data:appointment,isLoading} = useQuery(['medicinebooking',id],()=>fetch(url,{
       method:'GET',
             headers:{
