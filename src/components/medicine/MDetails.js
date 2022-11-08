@@ -45,9 +45,10 @@ const handleChange = event => {
    <div className='mt-32'>
     <div className='grid lg:grid-cols-2 sm:grid-cols-1 container'>
         <img src={parts.image} className='lg:max-w-lg mx-20'></img>
+       
        <div>
         <h1 className='font-bold text-primary text-3xl'>{parts.name}</h1>
-        <p className='text-gray-400 p-medicine'>{parts.description}</p>
+        <p className='text-gray-400 p-medicine'>{parts.des}</p>
         {/* modal  */}
 
 {/* The button to open modal */}

@@ -36,7 +36,7 @@ loop: true,
   
   <input {...register("name",)} placeholder="Medicine Name" />
   <input {...register("description",)} placeholder="MedicineDescription"/>
-  <input {...register("image",)} placeholder=" Medicine Image"/>
+  <input {...register("image",)} placeholder=" Medicine Image "/>
   <input type="number" {...register("price", )} placeholder="Medicine Price"/>
   <input type="number" {...register("review", )} placeholder="Medicine Review"/>
   

@@ -1,19 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Search } from "../Search/Search";
 const Medicines = ({medicines}) => {
   const {
     _id,
     name,
-    description,
+    des,
     price,
-    image,
+    images,
+  image,
     review
   } = medicines;
 
   return (
     <div>
+     
   <div className="card lg:max-w-lg bg-base-100 shadow-xl">
-  <figure><img src={image} className='' alt="Shoes" /></figure>
+  <figure><img src={image} className='lg:max-w-lg' alt="Shoes" /></figure>
+
   <div className="card-body">
     <h2 className="font-bold text-primary">
       {name}

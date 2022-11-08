@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Search } from '../Search/Search';
 import Medicines from './Medicines';
 
 
@@ -14,6 +15,7 @@ const Medicine = () => {
   return (
     <div className='container mx-auto px-6 p-3'>
        <h2 className='text-center text-xl pt-20 pb-16 font-bold text-gray-900 md:text-4xl'>Our <span className='text-primary'>Medicine</span> Collection</h2>
+       <Search></Search>
 <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
 
     {
