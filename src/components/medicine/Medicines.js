@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Search } from "../Search/Search";
+import './Medicines.css';
 const Medicines = ({medicines}) => {
   const {
     _id,
     name,
     des,
+    description,
     price,
     images,
   image,
@@ -15,17 +16,18 @@ const Medicines = ({medicines}) => {
   return (
     <div>
      
-  <div className="card lg:max-w-lg bg-base-100 shadow-xl">
-  <figure><img src={image} className='lg:max-w-lg' alt="Shoes" /></figure>
+  <div className="card lg:max-w-sm bg-base-100 shadow-xl medicine-card">
+  <figure><img src={image} className='w-48' alt="Shoes" /></figure>
 
   <div className="card-body">
+  <div className="font-bold"><i class="fa-solid fa-star text-yellow-500"></i> <i class="fa-solid fa-star text-yellow-500"></i> <i class="fa-solid fa-star text-yellow-500"></i> <i class="fa-solid fa-star text-yellow-500"></i> ({review})</div>
     <h2 className="font-bold text-primary">
       {name}
     
     </h2>
+   
     <div className="card-actions justify-start">
-      <div className="badge badge-outline font-bold">$ {price}</div> 
-      <div className="badge badge-outline font-bold">* {review}</div>
+      <div className=" font-bold">$ {price}.00</div> 
     </div>
     <div className="card-actions justify-end">
         <Link to={`/medicine/${_id}`}>

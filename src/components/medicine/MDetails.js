@@ -48,7 +48,7 @@ const handleChange = event => {
        
        <div>
         <h1 className='font-bold text-primary text-3xl'>{parts.name}</h1>
-        <p className='text-gray-400 p-medicine'>{parts.des}</p>
+        <p className='text-gray-400 p-medicine'>{parts.des || parts.description}</p>
         {/* modal  */}
 
 {/* The button to open modal */}
