@@ -21,11 +21,11 @@ const Specialty = () => {
           <div className="tmb-5 flex space-x-4">
             {/* Card-img  */}
             <div className="tmb-4 h-24 w-24 flex-shrink-0 rounded">
-              <img src={Img15} alt="" className="h-24 w-24 object-cover" />
+              <img src='https://i.ibb.co/GtXtjYh/360-F-302681154-9-HOWdv-GLt-CKpfw-O5-B85y-ESsz-G7-Mfml-Ul.jpg' alt="" className="h-24 w-24 object-cover" />
             </div>
             {/* Card-Title  */}
             <div className="text-left">
-              <h3 className="text-xl tmb-2 font-bold text-primary">
+              <h3 className="text-xl tmb-2 font-bold text-[#1b82e2]">
                 Dental Care / Dentistry
               </h3>
               <p className="text-sm pt-2 m-0 pr-8 font-normal text-gray-600">
@@ -44,11 +44,83 @@ const Specialty = () => {
           <div className="tmb-5 flex space-x-4">
             {/* Card-img  */}
             <div className="tmb-4 h-24 w-24 flex-shrink-0 rounded">
-              <img src={Img17} alt="" className="h-24 w-24 object-cover" />
+              <img src='https://i.ibb.co/xY5XyVm/419-4198753-urology-logo-png-clipart-png-download-urology-logo.png' alt="" className="h-24 w-24 object-cover" />
             </div>
             {/* Card-Title  */}
             <div className="text-left">
-              <h3 className="text-xl tmb-2 font-bold text-primary">Urology</h3>
+              <h3 className="text-xl tmb-2 font-bold text-[#1b82e2]">Urology</h3>
+              <p className="text-sm pt-2 m-0 pr-8 font-normal text-gray-600">
+                Diagnosis and treatment of diseases of the male and female
+                urinary-tract system.
+              </p>
+              <Link to='/uro'><i class="fa-solid fa-arrow-right ml-64 text-2xl text-primary font-bold"></i></Link>
+              
+            </div>
+          </div>
+        </div>
+        <div className="tp-4 mb-3 pt-5 pb-5 rounded-[10px] bg-white drop-shadow-xl ring-4 ring-gray-50 ring-offset-2 hover:bg-sky-500 hover:no-underline">
+          <div className="tmb-5 flex space-x-4">
+            {/* Card-img  */}
+            <div className="tmb-4 h-24 w-24 flex-shrink-0 rounded">
+              <img src='https://i.ibb.co/XVmcJmG/869gyno-logo.png' alt="" className="h-24 w-24 object-cover" />
+            </div>
+            {/* Card-Title  */}
+            <div className="text-left">
+              <h3 className="text-xl tmb-2 font-bold text-[#1b82e2]">Gynecology</h3>
+              <p className="text-sm pt-2 m-0 pr-8 font-normal text-gray-600">
+                Diagnosis and treatment of diseases of the male and female
+                urinary-tract system.
+              </p>
+              <Link to='/gyne'><i class="fa-solid fa-arrow-right ml-64 text-2xl text-primary font-bold"></i></Link>
+              
+            </div>
+          </div>
+        </div>
+        <div className="tp-4 mb-3 pt-5 pb-5 rounded-[10px] bg-white drop-shadow-xl ring-4 ring-gray-50 ring-offset-2 hover:bg-sky-500 hover:no-underline">
+          <div className="tmb-5 flex space-x-4">
+            {/* Card-img  */}
+            <div className="tmb-4 h-24 w-24 flex-shrink-0 rounded">
+              <img src='https://i.ibb.co/HTxy1YC/images.png' alt="" className="h-24 w-24 object-cover" />
+            </div>
+            {/* Card-Title  */}
+            <div className="text-left">
+              <h3 className="text-xl tmb-2 font-bold text-[#1b82e2]">Medicine</h3>
+              <p className="text-sm pt-2 m-0 pr-8 font-normal text-gray-600">
+                Diagnosis and treatment of diseases of the male and female
+                urinary-tract system.
+              </p>
+              <Link to='/uro'><i class="fa-solid fa-arrow-right ml-64 text-2xl text-primary font-bold"></i></Link>
+              
+            </div>
+          </div>
+        </div>
+        <div className="tp-4 mb-3 pt-5 pb-5 rounded-[10px] bg-white drop-shadow-xl ring-4 ring-gray-50 ring-offset-2 hover:bg-sky-500 hover:no-underline">
+          <div className="tmb-5 flex space-x-4">
+            {/* Card-img  */}
+            <div className="tmb-4 h-24 w-24 flex-shrink-0 rounded">
+              <img src='https://i.ibb.co/KDKqKcJ/Heart-Only.png' alt="" className="h-24 w-24 object-cover" />
+            </div>
+            {/* Card-Title  */}
+            <div className="text-left">
+              <h3 className="text-xl tmb-2 font-bold text-[#1b82e2]">Cardiology</h3>
+              <p className="text-sm pt-2 m-0 pr-8 font-normal text-gray-600">
+                Diagnosis and treatment of diseases of the male and female
+                urinary-tract system.
+              </p>
+              <Link to='/uro'><i class="fa-solid fa-arrow-right ml-64 text-2xl text-primary font-bold"></i></Link>
+              
+            </div>
+          </div>
+        </div>
+        <div className="tp-4 mb-3 pt-5 pb-5 rounded-[10px] bg-white drop-shadow-xl ring-4 ring-gray-50 ring-offset-2 hover:bg-sky-500 hover:no-underline">
+          <div className="tmb-5 flex space-x-4">
+            {/* Card-img  */}
+            <div className="tmb-4 h-24 w-24 flex-shrink-0 rounded">
+              <img src='https://i.ibb.co/wSRR7xv/528-At3-VB-400x400.png' alt="" className="h-24 w-24 object-cover" />
+            </div>
+            {/* Card-Title  */}
+            <div className="text-left">
+              <h3 className="text-xl tmb-2 font-bold text-[#1b82e2]">Endocrinology</h3>
               <p className="text-sm pt-2 m-0 pr-8 font-normal text-gray-600">
                 Diagnosis and treatment of diseases of the male and female
                 urinary-tract system.
