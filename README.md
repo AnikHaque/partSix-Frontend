@@ -1,1 +1,1 @@
-<h1>Partsix-Client-Side</h1>
+<h1>Partsix-Frontend</h1>
